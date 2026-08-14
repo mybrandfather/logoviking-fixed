@@ -1,0 +1,91 @@
+{
+  "name": "LogoViking \u2014 Image, Creator, Design & SEO Tools",
+  "short_name": "LogoViking",
+  "description": "80+ practical image, creator, design, social media, and SEO tools.",
+  "lang": "en",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0f172a",
+  "theme_color": "#7C3AED",
+  "categories": [
+    "productivity",
+    "utilities",
+    "graphics",
+    "business"
+  ],
+  "icons": [
+    {
+      "src": "/images/logoviking-helmet-logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/logoviking-helmet-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "All Tools",
+      "short_name": "Tools",
+      "description": "Browse all LogoViking tools",
+      "url": "/tools",
+      "icons": [
+        {
+          "src": "/favicon.svg",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Image Compressor",
+      "short_name": "Compress",
+      "description": "Compress images in your browser",
+      "url": "/tools/compress-image",
+      "icons": [
+        {
+          "src": "/favicon.svg",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Favicon Generator",
+      "short_name": "Favicon",
+      "description": "Create favicon sizes from one image",
+      "url": "/tools/favicon-generator",
+      "icons": [
+        {
+          "src": "/favicon.svg",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Aspect Ratio Calculator",
+      "short_name": "Aspect Ratio",
+      "description": "Calculate image and video ratios",
+      "url": "/tools/aspect-ratio-calculator",
+      "icons": [
+        {
+          "src": "/favicon.svg",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+  "screenshots": [],
+  "prefer_related_applications": false
+}

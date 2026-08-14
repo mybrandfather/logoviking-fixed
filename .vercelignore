@@ -1,0 +1,28 @@
+# Files & folders that should NOT be uploaded to Vercel
+node_modules
+.git
+.gitignore
+.env
+.env.local
+.env.*.local
+.DS_Store
+*.log
+npm-debug.log*
+
+# Hostinger-specific (Vercel uses serverless, not this)
+server.js
+
+# Local builds — Vercel will build fresh on deploy
+dist
+build
+.cache
+
+# Editor / OS
+.idea
+.vscode
+Thumbs.db
+
+# Docs not needed at runtime
+docs/
+*.md
+!README.md

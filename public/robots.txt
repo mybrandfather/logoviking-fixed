@@ -1,0 +1,30 @@
+User-agent: *
+Allow: /
+Disallow: /auth/
+Disallow: /dashboard
+Disallow: /account
+Disallow: /settings
+Disallow: /credits
+Disallow: /api/
+
+User-agent: Googlebot
+Allow: /
+Disallow: /auth/
+Disallow: /dashboard
+Disallow: /account
+Disallow: /settings
+Disallow: /credits
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+Disallow: /auth/
+Disallow: /dashboard
+Disallow: /account
+Disallow: /settings
+Disallow: /credits
+
+Sitemap: https://www.logoviking.com/sitemap-index.xml
+Sitemap: https://www.logoviking.com/sitemap.xml

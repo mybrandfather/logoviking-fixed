@@ -1,0 +1,6 @@
+Contact: mailto:security@logoviking.com
+Contact: https://www.logoviking.com/contact
+Expires: 2027-12-31T23:59:59.000Z
+Preferred-Languages: en
+Canonical: https://www.logoviking.com/.well-known/security.txt
+Policy: https://www.logoviking.com/privacy

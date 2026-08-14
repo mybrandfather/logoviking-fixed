@@ -1,0 +1,546 @@
+{
+  "tools": [
+    {
+      "slug": "all-in-one-creator-kit",
+      "name": "All-in-One Creator Kit",
+      "category": "ai",
+      "description": "One topic \u2192 titles, hashtags, thumbnails, captions, keywords, and content ideas. Your fastest path to publish-ready assets."
+    },
+    {
+      "slug": "compress-image",
+      "name": "Compress Image",
+      "category": "image",
+      "description": "Shrink image file sizes without losing quality for faster pages."
+    },
+    {
+      "slug": "resize-image",
+      "name": "Resize Image",
+      "category": "image",
+      "description": "Resize images to exact dimensions for any platform or use case."
+    },
+    {
+      "slug": "bulk-resize",
+      "name": "Bulk Resize",
+      "category": "image",
+      "description": "Resize multiple images at once in a single workflow."
+    },
+    {
+      "slug": "crop-image",
+      "name": "Crop Image",
+      "category": "image",
+      "description": "Crop images to a precise area or aspect ratio."
+    },
+    {
+      "slug": "rotate-image",
+      "name": "Rotate Image",
+      "category": "image",
+      "description": "Rotate or flip any image quickly."
+    },
+    {
+      "slug": "convert-png-to-jpg",
+      "name": "PNG to JPG",
+      "category": "image",
+      "description": "Convert PNG files to JPG instantly."
+    },
+    {
+      "slug": "convert-jpg-to-png",
+      "name": "JPG to PNG",
+      "category": "image",
+      "description": "Convert JPG files to PNG with transparency support."
+    },
+    {
+      "slug": "webp-converter",
+      "name": "WebP Converter",
+      "category": "image",
+      "description": "Convert images to modern WebP format for better web performance."
+    },
+    {
+      "slug": "webp-to-jpg",
+      "name": "WebP to JPG",
+      "category": "image",
+      "description": "Convert WebP images to JPG instantly in your browser."
+    },
+    {
+      "slug": "webp-to-png",
+      "name": "WebP to PNG",
+      "category": "image",
+      "description": "Convert WebP images to lossless PNG without uploading files."
+    },
+    {
+      "slug": "png-to-webp",
+      "name": "PNG to WebP",
+      "category": "image",
+      "description": "Convert PNG images to smaller WebP files for websites and apps."
+    },
+    {
+      "slug": "jpg-to-webp",
+      "name": "JPG to WebP",
+      "category": "image",
+      "description": "Convert JPG photos to WebP and reduce web image weight."
+    },
+    {
+      "slug": "image-to-base64",
+      "name": "Image to Base64",
+      "category": "image",
+      "description": "Convert an image to a Base64 data URL for HTML, CSS, email, or development."
+    },
+    {
+      "slug": "image-dimensions",
+      "name": "Image Dimensions Checker",
+      "category": "image",
+      "description": "Check image width, height, aspect ratio, file type, and file size instantly."
+    },
+    {
+      "slug": "watermark-tool",
+      "name": "Watermark Tool",
+      "category": "image",
+      "description": "Add a custom watermark to your images."
+    },
+    {
+      "slug": "meme-creator",
+      "name": "Meme Creator",
+      "category": "image",
+      "description": "Create viral memes with text overlays."
+    },
+    {
+      "slug": "background-remover",
+      "name": "AI Background Remover",
+      "category": "image",
+      "description": "Remove image backgrounds with AI \u2014 100% in your browser, nothing uploaded."
+    },
+    {
+      "slug": "blur-background",
+      "name": "Blur & Filters",
+      "category": "image",
+      "description": "Apply blur, grayscale, sepia and other filters to any image."
+    },
+    {
+      "slug": "color-picker",
+      "name": "Color Picker",
+      "category": "image",
+      "description": "Pick and copy exact color codes from any image."
+    },
+    {
+      "slug": "image-upscaler",
+      "name": "Image Upscaler",
+      "category": "image",
+      "description": "Enlarge images in your browser with high-quality resampling and no upload required."
+    },
+    {
+      "slug": "image-optimizer",
+      "name": "Image Optimizer",
+      "category": "image",
+      "description": "Reduce image file size and tune quality for faster websites and sharing."
+    },
+    {
+      "slug": "color-palette-generator",
+      "name": "Color Palette Generator",
+      "category": "designer",
+      "description": "Generate beautiful, harmonious color palettes instantly."
+    },
+    {
+      "slug": "gradient-generator",
+      "name": "Gradient Generator",
+      "category": "designer",
+      "description": "Create CSS gradients visually and copy the code."
+    },
+    {
+      "slug": "font-pair-generator",
+      "name": "Font Pair Generator",
+      "category": "designer",
+      "description": "Find the perfect font pairing for your brand or project."
+    },
+    {
+      "slug": "gif-to-video",
+      "name": "GIF to WebM/MP4",
+      "category": "designer",
+      "description": "Convert GIFs to lightweight WebM or MP4 for faster websites \u2014 with embed code included."
+    },
+    {
+      "slug": "qr-code-generator",
+      "name": "QR Code Generator",
+      "category": "designer",
+      "description": "Generate branded QR codes for links and content."
+    },
+    {
+      "slug": "logo-size-generator",
+      "name": "Logo Size Guide",
+      "category": "designer",
+      "description": "Get the correct logo dimensions for every platform."
+    },
+    {
+      "slug": "social-media-size-generator",
+      "name": "Social Media Sizes",
+      "category": "designer",
+      "description": "Lookup the right size for every social media format."
+    },
+    {
+      "slug": "favicon-generator",
+      "name": "Favicon Generator",
+      "category": "designer",
+      "description": "Create favicon PNG sizes and copy ready-to-use HTML link tags from one image."
+    },
+    {
+      "slug": "aspect-ratio-calculator",
+      "name": "Aspect Ratio Calculator",
+      "category": "designer",
+      "description": "Calculate image and video aspect ratios, missing dimensions, and common platform sizes."
+    },
+    {
+      "slug": "youtube-money-calculator",
+      "name": "YouTube Calculator",
+      "category": "youtube",
+      "description": "Estimate your YouTube earnings from views and RPM."
+    },
+    {
+      "slug": "thumbnail-downloader",
+      "name": "Thumbnail Downloader",
+      "category": "youtube",
+      "description": "Download YouTube video thumbnails in full quality."
+    },
+    {
+      "slug": "thumbnail-generator",
+      "name": "Thumbnail Generator",
+      "category": "youtube",
+      "description": "Generate click-worthy YouTube thumbnail ideas."
+    },
+    {
+      "slug": "thumbnail-text-generator",
+      "name": "Thumbnail Text",
+      "category": "youtube",
+      "description": "Generate bold thumbnail text that increases CTR."
+    },
+    {
+      "slug": "channel-name-generator",
+      "name": "Channel Name Generator",
+      "category": "youtube",
+      "description": "Generate catchy, brandable YouTube channel names."
+    },
+    {
+      "slug": "video-title-generator",
+      "name": "Video Title Generator",
+      "category": "youtube",
+      "description": "Generate SEO-friendly, high-CTR YouTube video titles."
+    },
+    {
+      "slug": "tag-generator",
+      "name": "Tag Generator",
+      "category": "youtube",
+      "description": "Generate relevant YouTube tags for better discoverability."
+    },
+    {
+      "slug": "description-generator",
+      "name": "Description Generator",
+      "category": "youtube",
+      "description": "Write keyword-rich YouTube video descriptions fast."
+    },
+    {
+      "slug": "script-idea-generator",
+      "name": "Script Idea Generator",
+      "category": "youtube",
+      "description": "Generate structured video script ideas by topic."
+    },
+    {
+      "slug": "video-topic-generator",
+      "name": "Video Topic Generator",
+      "category": "youtube",
+      "description": "Discover trending video topics for your niche."
+    },
+    {
+      "slug": "video-seo-generator",
+      "name": "Video SEO Generator",
+      "category": "youtube",
+      "description": "Full SEO package: title, description, tags, and chapters."
+    },
+    {
+      "slug": "tiktok-earnings-calculator",
+      "name": "TikTok Calculator",
+      "category": "tiktok",
+      "description": "Estimate your TikTok earnings by followers and views."
+    },
+    {
+      "slug": "tiktok-hashtag-generator",
+      "name": "Hashtag Generator",
+      "category": "tiktok",
+      "description": "Generate trending TikTok hashtags for more reach."
+    },
+    {
+      "slug": "tiktok-caption-generator",
+      "name": "Caption Generator",
+      "category": "tiktok",
+      "description": "Write engaging TikTok captions that drive action."
+    },
+    {
+      "slug": "trend-idea-generator",
+      "name": "Trend Idea Generator",
+      "category": "tiktok",
+      "description": "Discover what TikTok trends to jump on next."
+    },
+    {
+      "slug": "username-generator",
+      "name": "Username Generator",
+      "category": "tiktok",
+      "description": "Generate catchy, available TikTok usernames."
+    },
+    {
+      "slug": "instagram-earnings-calculator",
+      "name": "Instagram Calculator",
+      "category": "instagram",
+      "description": "Estimate Instagram earnings for influencer and brand deals."
+    },
+    {
+      "slug": "engagement-calculator",
+      "name": "Engagement Calculator",
+      "category": "instagram",
+      "description": "Calculate your Instagram engagement rate instantly."
+    },
+    {
+      "slug": "bio-generator",
+      "name": "Bio Generator",
+      "category": "instagram",
+      "description": "Write a compelling Instagram bio in seconds."
+    },
+    {
+      "slug": "instagram-caption-generator",
+      "name": "Caption Generator",
+      "category": "instagram",
+      "description": "Generate captions that drive saves, shares, and comments."
+    },
+    {
+      "slug": "instagram-hashtag-generator",
+      "name": "Hashtag Generator",
+      "category": "instagram",
+      "description": "Find the best Instagram hashtags for your niche."
+    },
+    {
+      "slug": "reel-idea-generator",
+      "name": "Reel Idea Generator",
+      "category": "instagram",
+      "description": "Generate Reel ideas that are built for virality."
+    },
+    {
+      "slug": "pinterest-title-generator",
+      "name": "Pin Title Generator",
+      "category": "pinterest",
+      "description": "Write SEO-rich Pinterest pin titles that rank."
+    },
+    {
+      "slug": "pinterest-description-generator",
+      "name": "Pin Description",
+      "category": "pinterest",
+      "description": "Write keyword-focused Pinterest descriptions."
+    },
+    {
+      "slug": "pin-idea-generator",
+      "name": "Pin Idea Generator",
+      "category": "pinterest",
+      "description": "Generate Pinterest content ideas for your niche."
+    },
+    {
+      "slug": "keyword-generator",
+      "name": "Pinterest Keywords",
+      "category": "pinterest",
+      "description": "Find the best keywords for Pinterest search traffic."
+    },
+    {
+      "slug": "keyword-density-checker",
+      "name": "Keyword Density Checker",
+      "category": "seo",
+      "description": "Analyze keyword density in your content for SEO."
+    },
+    {
+      "slug": "seo-title-generator",
+      "name": "SEO Title Generator",
+      "category": "seo",
+      "description": "Generate click-worthy, SEO-optimized page titles."
+    },
+    {
+      "slug": "meta-generator",
+      "name": "Meta Generator",
+      "category": "seo",
+      "description": "Generate meta titles and descriptions for any page."
+    },
+    {
+      "slug": "sitemap-generator",
+      "name": "Sitemap Generator",
+      "category": "seo",
+      "description": "Generate an XML sitemap for your website."
+    },
+    {
+      "slug": "robots-generator",
+      "name": "Robots.txt Generator",
+      "category": "seo",
+      "description": "Generate a robots.txt file for crawl control."
+    },
+    {
+      "slug": "readability-checker",
+      "name": "Readability Checker",
+      "category": "seo",
+      "description": "Check your Flesch reading ease score, grade level, and get improvement tips instantly."
+    },
+    {
+      "slug": "open-graph-generator",
+      "name": "Open Graph Generator",
+      "category": "seo",
+      "description": "Generate Open Graph meta tags for social sharing."
+    },
+    {
+      "slug": "schema-generator",
+      "name": "Schema Generator",
+      "category": "seo",
+      "description": "Generate JSON-LD schema markup for rich results."
+    },
+    {
+      "slug": "faq-generator",
+      "name": "FAQ Generator",
+      "category": "seo",
+      "description": "Generate SEO-structured FAQ sections with schema."
+    },
+    {
+      "slug": "character-counter",
+      "name": "Character Counter",
+      "category": "seo",
+      "description": "Count characters for Twitter, Instagram, TikTok, YouTube, and LinkedIn \u2014 all platform limits in one view."
+    },
+    {
+      "slug": "word-counter",
+      "name": "Word Counter",
+      "category": "seo",
+      "description": "Count words, characters, sentences, paragraphs, and reading time instantly."
+    },
+    {
+      "slug": "content-idea-generator",
+      "name": "Content Idea Generator",
+      "category": "ai",
+      "description": "Generate 10+ content ideas from one topic input."
+    },
+    {
+      "slug": "viral-hook-generator",
+      "name": "Viral Hook Generator",
+      "category": "ai",
+      "description": "Generate opening hooks that stop the scroll."
+    },
+    {
+      "slug": "blog-topic-generator",
+      "name": "Blog Topic Generator",
+      "category": "ai",
+      "description": "Generate SEO-friendly blog topics for your niche."
+    },
+    {
+      "slug": "ai-thumbnail-generator",
+      "name": "AI Thumbnail Generator",
+      "category": "ai",
+      "description": "Generate thumbnail concepts that increase CTR."
+    },
+    {
+      "slug": "ai-post-generator",
+      "name": "AI Post Generator",
+      "category": "ai",
+      "description": "Generate complete social posts from a single idea."
+    },
+    {
+      "slug": "social-post-generator",
+      "name": "Social Post Generator",
+      "category": "ai",
+      "description": "Generate platform-specific social posts at scale."
+    },
+    {
+      "slug": "video-hook-generator",
+      "name": "Video Hook Generator",
+      "category": "ai",
+      "description": "Generate the first 5 seconds that keep viewers watching."
+    },
+    {
+      "slug": "linkedin-post-generator",
+      "name": "LinkedIn Post Generator",
+      "category": "ai",
+      "description": "Generate professional LinkedIn posts that drive engagement and grow your authority."
+    },
+    {
+      "slug": "email-subject-generator",
+      "name": "Email Subject Generator",
+      "category": "ai",
+      "description": "Generate email subject lines that maximize open rates \u2014 A/B test variations included."
+    },
+    {
+      "slug": "content-calendar-generator",
+      "name": "Content Calendar",
+      "category": "ai",
+      "description": "Generate a 30-day content calendar with daily post ideas for any platform or niche."
+    },
+    {
+      "slug": "video-script-generator",
+      "name": "Video Script Generator",
+      "category": "ai",
+      "description": "Generate a complete video script \u2014 hook, intro, body, CTA, and outro \u2014 from any topic."
+    },
+    {
+      "slug": "brand-deal-calculator",
+      "name": "Brand Deal Calculator",
+      "category": "instagram",
+      "description": "Calculate your brand deal rate across YouTube, Instagram, TikTok, and LinkedIn."
+    }
+  ],
+  "blogs": [
+    {
+      "slug": "youtube-thumbnail-secrets",
+      "title": "YouTube Thumbnail Secrets",
+      "description": "Composition, text hierarchy, and curiosity strategy for higher click-through rates."
+    },
+    {
+      "slug": "ai-content-creation-guide",
+      "title": "AI Content Creation Guide",
+      "description": "Build a faster publishing workflow using AI as a planning and drafting engine."
+    },
+    {
+      "slug": "youtube-thumbnail-ctr",
+      "title": "YouTube Thumbnail Secrets That Actually Drive Clicks",
+      "description": "The data-backed thumbnail tactics that top creators use to hit 8-12% click-through rates."
+    },
+    {
+      "slug": "character-counter-platform-limits",
+      "title": "Character Counter: Every Platform's Limit in 2026",
+      "description": "Twitter, Instagram, TikTok, YouTube, LinkedIn \u2014 all character limits in one guide, with a free counter tool that checks all platforms at once."
+    },
+    {
+      "slug": "email-subject-lines-that-get-opened",
+      "title": "Email Subject Lines That Get Opened: 47 Templates + Data",
+      "description": "The psychological triggers, A/B testing strategy, and formulas behind email subject lines that consistently hit 40-60% open rates."
+    },
+    {
+      "slug": "brand-deal-rate-calculator-guide",
+      "title": "How Much to Charge for Brand Deals: Rates, Formulas, and Negotiation",
+      "description": "The complete creator's guide to pricing brand deals \u2014 with rates by platform, niche multipliers, deliverable pricing, and negotiation scripts that work."
+    },
+    {
+      "slug": "png-vs-jpg-explained",
+      "title": "PNG vs JPG: Which Image Format Should You Use?",
+      "description": "A practical PNG vs JPG comparison for websites, screenshots, photos, transparency, and file size."
+    },
+    {
+      "slug": "compress-images-for-web",
+      "title": "How to Compress Images for the Web Without Ruining Quality",
+      "description": "A practical guide to smaller JPG, PNG, and WebP files for faster websites, email, and uploads."
+    },
+    {
+      "slug": "webp-vs-jpg-guide",
+      "title": "WebP vs JPG: Which Image Format Should You Use?",
+      "description": "Compare WebP and JPG for websites, quality, compatibility, file size, and conversion workflows."
+    },
+    {
+      "slug": "gif-to-webm-guide",
+      "title": "How to Convert GIF to WebM for a Faster Website",
+      "description": "Why animated GIFs can be heavy, how WebM helps, and how to replace a GIF with a looping video."
+    },
+    {
+      "slug": "favicon-size-guide",
+      "title": "Favicon Size Guide: Create the Right Icons for Browsers and Devices",
+      "description": "The practical favicon sizes to export, how to add them to HTML, and how to create them from one source image."
+    },
+    {
+      "slug": "aspect-ratio-guide",
+      "title": "Aspect Ratio Guide for YouTube, Instagram, TikTok, and Websites",
+      "description": "Understand 16:9, 9:16, 1:1, 4:5, and other ratios, then calculate missing dimensions without distortion."
+    }
+  ]
+}

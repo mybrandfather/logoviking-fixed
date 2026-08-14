@@ -1,0 +1,6 @@
+# Logoviking AdSense configuration
+# Replace the line below with your real entry from Google AdSense
+# Go to: https://adsense.google.com → Sites → Your site → ads.txt
+# Format: google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+
+# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0

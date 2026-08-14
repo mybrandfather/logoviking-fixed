@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  html, body {
+    /* Prevent accidental horizontal scroll on any device */
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100;
+    font-feature-settings: "ss01" 1, "ss02" 1, "cv01" 1, "cv02" 1;
+    /* Ensure mobile Safari treats the viewport correctly */
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  /* Make all interactive elements meet 44×44 tap-target on touch */
+  @media (pointer: coarse) {
+    button, a[role="button"], [role="button"] {
+      min-height: 36px;
+    }
+  }
+
+  /* Prevent iOS form-field zoom (font-size must be >= 16px) */
+  @media (max-width: 640px) {
+    input, textarea, select {
+      font-size: 16px;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  ::selection {
+    @apply bg-violet-500 text-white;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    @apply outline-none;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .grid-bg {
+    background-image: radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.18) 1px, transparent 0);
+    background-size: 22px 22px;
+  }
+
+  .glass-panel {
+    @apply border border-white/12 bg-white/70 shadow-[0_20px_80px_-25px_rgba(15,23,42,0.32)] backdrop-blur-xl dark:bg-slate-950/70;
+  }
+
+  .section-shell {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Safe-area-aware bottom padding (iPhone home bar) */
+  .pb-safe {
+    padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+  }
+}
