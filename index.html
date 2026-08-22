@@ -30,13 +30,8 @@
     <!-- Canonical -->
     <link rel="canonical" href="https://www.logoviking.com/" />
 
-    <!-- Hreflang (international SEO) -->
-    <link rel="alternate" href="https://www.logoviking.com/" hreflang="x-default" />
-    <link rel="alternate" href="https://www.logoviking.com/" hreflang="en" />
-
     <!-- Icons + PWA -->
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="icon" href="/favicon.ico" sizes="32x32" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
 
@@ -51,12 +46,6 @@
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Logoviking — Creator + Designer + SEO Toolkit" />
     <meta property="og:locale" content="en_US" />
-    <meta property="og:locale:alternate" content="es_ES" />
-    <meta property="og:locale:alternate" content="pt_BR" />
-    <meta property="og:locale:alternate" content="fr_FR" />
-    <meta property="og:locale:alternate" content="de_DE" />
-    <meta property="og:locale:alternate" content="ru_RU" />
-    <meta property="og:locale:alternate" content="ar_SA" />
 
     <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -100,21 +89,14 @@
     }
     </script>
 
-    <!-- JSON-LD WebSite + SearchAction -->
+    <!-- JSON-LD WebSite. On-site query-string search is intentionally omitted
+         from structured data so crawlers receive only clean public URLs. -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "Logoviking",
-      "url": "https://www.logoviking.com",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://www.logoviking.com/tools?q={search_term_string}"
-        },
-        "query-input": "required name=search_term_string"
-      }
+      "url": "https://www.logoviking.com"
     }
     </script>
 <!-- Google Analytics 4 -->

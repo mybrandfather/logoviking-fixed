@@ -10,6 +10,13 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const distDir = path.resolve(__dirname, "dist");
 const port = Number.parseInt(process.env.PORT ?? "3000", 10);
+const canonicalOrigin = "https://www.logoviking.com";
+const canonicalHost = "www.logoviking.com";
+const legacyRedirects = new Map([
+  ["/index.html", "/"],
+  ["/subscription", "/pricing"],
+  ["/tools/ai-smart-image-optimizer", "/tools/image-optimizer"],
+]);
 
 // ─── MIME types (Google-friendly content types) ──────────────────────────────
 const mimeTypes = {
@@ -47,14 +54,12 @@ const wellKnownFiles = new Set([
   "/sitemap-tools.xml",
   "/sitemap-categories.xml",
   "/sitemap-blog.xml",
-  "/sitemap-images.xml",
   "/site.webmanifest",
   "/manifest.json",
   "/humans.txt",
   "/security.txt",
   "/ads.txt",
   "/browserconfig.xml",
-  "/favicon.ico",
   "/favicon.svg",
   "/apple-touch-icon.png",
   "/og-image.png",
@@ -173,9 +178,13 @@ async function fileExists(filePath) {
 
 function toSafePath(requestPath) {
   // Decode + normalize, prevent path traversal
-  const decoded = decodeURIComponent(requestPath);
-  const resolved = path.resolve(distDir, "." + decoded);
-  return resolved.startsWith(distDir) ? resolved : null;
+  try {
+    const decoded = decodeURIComponent(requestPath);
+    const resolved = path.resolve(distDir, "." + decoded);
+    return resolved === distDir || resolved.startsWith(`${distDir}${path.sep}`) ? resolved : null;
+  } catch {
+    return null;
+  }
 }
 
 const COMPRESSIBLE = new Set([".html", ".js", ".css", ".svg", ".xml", ".txt", ".json", ".webmanifest", ".map"]);
@@ -198,6 +207,11 @@ async function serveFile(req, res, filePath, urlPath) {
   res.setHeader("Content-Type", mimeTypes[ext] ?? "application/octet-stream");
   res.setHeader("Vary", "Accept-Encoding");
   setCacheHeaders(res, ext, urlPath);
+
+  if (req.method === "HEAD") {
+    res.end();
+    return;
+  }
 
   return new Promise((resolve, reject) => {
     const stream = createReadStream(filePath);
@@ -230,14 +244,53 @@ async function ensureDistExists() {
   }
 }
 
-await ensureDistExists();
-
-const server = createServer(async (request, response) => {
+export function createLogoVikingServer() {
+return createServer(async (request, response) => {
   applySecurityHeaders(response);
 
-  // Always allow important SEO files even if rate-limited
   const url = new URL(request.url ?? "/", `http://${request.headers.host ?? "localhost"}`);
   const requestPath = url.pathname;
+  const requestHost = String(request.headers.host ?? "").split(":")[0].toLowerCase();
+  const forwardedProto = String(request.headers["x-forwarded-proto"] ?? "").split(",")[0].trim().toLowerCase();
+  const isProductionHost = requestHost === canonicalHost || requestHost === "logoviking.com";
+  const isSecure = forwardedProto ? forwardedProto === "https" : Boolean(request.socket.encrypted);
+
+  if (!['GET','HEAD'].includes(request.method ?? 'GET')) {
+    send(response, 405, { "Content-Type": "text/plain; charset=utf-8", "Allow": "GET, HEAD" }, "Method not allowed.");
+    return;
+  }
+
+  const legacyTarget = legacyRedirects.get(requestPath);
+  if (legacyTarget) {
+    const location = isProductionHost ? `${canonicalOrigin}${legacyTarget}${url.search}` : `${legacyTarget}${url.search}`;
+    send(response, 308, { Location: location }, "");
+    return;
+  }
+
+  // Collapse scheme + host canonicalization into one permanent redirect.
+  if (isProductionHost && (requestHost !== canonicalHost || !isSecure)) {
+    send(response, 308, { Location: `${canonicalOrigin}${requestPath}${url.search}` }, "");
+    return;
+  }
+
+  if (requestPath.length > 1 && requestPath.endsWith('/')) {
+    const cleanPath = requestPath.replace(/\/+$/, '');
+    const cleanRouteFile = toSafePath(`${cleanPath}.html`);
+    if (cleanRouteFile && await fileExists(cleanRouteFile)) {
+      const location = isProductionHost ? `${canonicalOrigin}${cleanPath}${url.search}` : `${cleanPath}${url.search}`;
+      send(response, 308, { Location: location }, "");
+      return;
+    }
+  }
+
+  if (requestPath.endsWith('.html')) {
+    const cleanPath = requestPath.slice(0, -5) || '/';
+    const location = isProductionHost ? `${canonicalOrigin}${cleanPath}${url.search}` : `${cleanPath}${url.search}`;
+    send(response, 308, { Location: location }, "");
+    return;
+  }
+
+  // Always allow important SEO files even if rate-limited
   const isWellKnown = wellKnownFiles.has(requestPath);
   const ua = String(request.headers["user-agent"] ?? "");
 
@@ -275,23 +328,37 @@ const server = createServer(async (request, response) => {
     return;
   }
 
-  // SPA fallback → serve index.html for all other routes
-  const htmlPath = path.join(distDir, "index.html");
-  if (await fileExists(htmlPath)) {
+  // Serve only a route that the build actually prerendered.
+  const htmlPath = requestPath === "/"
+    ? path.join(distDir, "index.html")
+    : toSafePath(`${requestPath}.html`);
+  if (htmlPath && await fileExists(htmlPath)) {
     try {
-      await serveFile(request, response, htmlPath, "/");
+      await serveFile(request, response, htmlPath, requestPath);
     } catch {
       if (!response.writableEnded) send(response, 500, { "Content-Type": "text/plain" }, "Server error.");
     }
     return;
   }
 
+  const notFoundPath = path.join(distDir, "404.html");
+  if (await fileExists(notFoundPath)) {
+    response.statusCode = 404;
+    await serveFile(request, response, notFoundPath, "/404.html");
+    return;
+  }
+
   send(response, 503, { "Content-Type": "text/plain; charset=utf-8" }, "Build the app first with `npm run build`.");
 });
+}
 
-server.listen(port, () => {
-  console.log(`🚀 Logoviking server running on http://localhost:${port}`);
-  console.log(`📄 Sitemap index: http://localhost:${port}/sitemap-index.xml`);
-  console.log(`🤖 Robots: http://localhost:${port}/robots.txt`);
-  console.log(`✅ Health check: http://localhost:${port}/healthz`);
-});
+if (process.argv[1] && path.resolve(process.argv[1]) === __filename) {
+  await ensureDistExists();
+  const server = createLogoVikingServer();
+  server.listen(port, () => {
+    console.log(`🚀 Logoviking server running on http://localhost:${port}`);
+    console.log(`📄 Sitemap index: http://localhost:${port}/sitemap-index.xml`);
+    console.log(`🤖 Robots: http://localhost:${port}/robots.txt`);
+    console.log(`✅ Health check: http://localhost:${port}/healthz`);
+  });
+}

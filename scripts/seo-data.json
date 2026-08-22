@@ -1,4 +1,5 @@
 {
+  "lastModified": "2026-08-22",
   "tools": [
     {
       "slug": "all-in-one-creator-kit",
@@ -515,7 +516,23 @@
     {
       "slug": "png-vs-jpg-explained",
       "title": "PNG vs JPG: Which Image Format Should You Use?",
-      "description": "A practical PNG vs JPG comparison for websites, screenshots, photos, transparency, and file size."
+      "description": "A practical PNG vs JPG comparison for websites, screenshots, photos, transparency, and file size.",
+      "sections": [
+        {
+          "title": "PNG and JPG solve different problems",
+          "paragraphs": [
+            "JPG is designed for photographs and continuous-tone images where smaller files matter more than perfect pixel preservation. PNG is lossless and supports transparency, which makes it useful for graphics, screenshots, logos, and interface assets.",
+            "Neither format is always better. Choose based on the image content and where it will be used."
+          ]
+        },
+        {
+          "title": "Which is better for a website?",
+          "paragraphs": [
+            "For photographs, JPG or WebP often produces smaller files. For transparent graphics, PNG or WebP is usually more appropriate.",
+            "Before publishing, resize the image to the dimensions you actually need and compress it. LogoViking includes separate PNG-to-JPG, JPG-to-PNG, WebP conversion, resize, and compression tools."
+          ]
+        }
+      ]
     },
     {
       "slug": "compress-images-for-web",

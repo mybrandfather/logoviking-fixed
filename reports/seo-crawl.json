@@ -1,0 +1,1495 @@
+{
+  "generatedAt": "2026-08-22T18:33:48.164Z",
+  "canonicalOrigin": "https://www.logoviking.com",
+  "pages": [
+    {
+      "url": "https://www.logoviking.com",
+      "status": 200,
+      "canonical": "https://www.logoviking.com",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/categories",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/categories",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/blog",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/blog",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/faq",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/faq",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/pricing",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/pricing",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/about",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/about",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/contact",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/contact",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/privacy",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/privacy",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/terms",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/terms",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/disclaimer",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/disclaimer",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/cookies",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/cookies",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/affiliate-disclosure",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/affiliate-disclosure",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/dmca",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/dmca",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/all-in-one-creator-kit",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/all-in-one-creator-kit",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/compress-image",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/compress-image",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/resize-image",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/resize-image",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/bulk-resize",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/bulk-resize",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/crop-image",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/crop-image",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/rotate-image",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/rotate-image",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/convert-png-to-jpg",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/convert-png-to-jpg",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/convert-jpg-to-png",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/convert-jpg-to-png",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/webp-converter",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/webp-converter",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/webp-to-jpg",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/webp-to-jpg",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/webp-to-png",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/webp-to-png",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/png-to-webp",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/png-to-webp",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/jpg-to-webp",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/jpg-to-webp",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/image-to-base64",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/image-to-base64",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/image-dimensions",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/image-dimensions",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/watermark-tool",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/watermark-tool",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/meme-creator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/meme-creator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/background-remover",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/background-remover",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/blur-background",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/blur-background",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/color-picker",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/color-picker",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/image-upscaler",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/image-upscaler",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/image-optimizer",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/image-optimizer",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/color-palette-generator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/color-palette-generator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/gradient-generator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/gradient-generator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/font-pair-generator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/font-pair-generator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/gif-to-video",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/gif-to-video",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/qr-code-generator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/qr-code-generator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/logo-size-generator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/logo-size-generator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/social-media-size-generator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/social-media-size-generator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/favicon-generator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/favicon-generator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/aspect-ratio-calculator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/aspect-ratio-calculator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/youtube-money-calculator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/youtube-money-calculator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/thumbnail-downloader",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/thumbnail-downloader",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/thumbnail-generator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/thumbnail-generator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/thumbnail-text-generator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/thumbnail-text-generator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/channel-name-generator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/channel-name-generator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/video-title-generator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/video-title-generator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/tag-generator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/tag-generator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/description-generator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/description-generator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/script-idea-generator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/script-idea-generator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/video-topic-generator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/video-topic-generator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/video-seo-generator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/video-seo-generator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/tiktok-earnings-calculator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/tiktok-earnings-calculator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/tiktok-hashtag-generator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/tiktok-hashtag-generator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/tiktok-caption-generator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/tiktok-caption-generator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/trend-idea-generator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/trend-idea-generator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/username-generator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/username-generator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/instagram-earnings-calculator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/instagram-earnings-calculator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/engagement-calculator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/engagement-calculator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/bio-generator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/bio-generator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/instagram-caption-generator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/instagram-caption-generator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/instagram-hashtag-generator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/instagram-hashtag-generator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/reel-idea-generator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/reel-idea-generator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/pinterest-title-generator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/pinterest-title-generator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/pinterest-description-generator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/pinterest-description-generator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/pin-idea-generator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/pin-idea-generator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/keyword-generator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/keyword-generator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/keyword-density-checker",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/keyword-density-checker",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/seo-title-generator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/seo-title-generator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/meta-generator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/meta-generator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/sitemap-generator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/sitemap-generator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/robots-generator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/robots-generator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/readability-checker",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/readability-checker",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/open-graph-generator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/open-graph-generator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/schema-generator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/schema-generator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/faq-generator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/faq-generator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/character-counter",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/character-counter",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/word-counter",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/word-counter",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/content-idea-generator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/content-idea-generator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/viral-hook-generator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/viral-hook-generator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/blog-topic-generator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/blog-topic-generator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/ai-thumbnail-generator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/ai-thumbnail-generator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/ai-post-generator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/ai-post-generator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/social-post-generator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/social-post-generator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/video-hook-generator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/video-hook-generator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/linkedin-post-generator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/linkedin-post-generator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/email-subject-generator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/email-subject-generator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/content-calendar-generator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/content-calendar-generator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/video-script-generator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/video-script-generator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/tools/brand-deal-calculator",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/tools/brand-deal-calculator",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/categories/ai",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/categories/ai",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/categories/image",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/categories/image",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/categories/designer",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/categories/designer",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/categories/youtube",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/categories/youtube",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/categories/tiktok",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/categories/tiktok",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/categories/instagram",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/categories/instagram",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/categories/pinterest",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/categories/pinterest",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/categories/seo",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/categories/seo",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/blog/youtube-thumbnail-secrets",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/blog/youtube-thumbnail-secrets",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/blog/ai-content-creation-guide",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/blog/ai-content-creation-guide",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/blog/youtube-thumbnail-ctr",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/blog/youtube-thumbnail-ctr",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/blog/character-counter-platform-limits",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/blog/character-counter-platform-limits",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/blog/email-subject-lines-that-get-opened",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/blog/email-subject-lines-that-get-opened",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/blog/brand-deal-rate-calculator-guide",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/blog/brand-deal-rate-calculator-guide",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/blog/png-vs-jpg-explained",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/blog/png-vs-jpg-explained",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/blog/compress-images-for-web",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/blog/compress-images-for-web",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/blog/webp-vs-jpg-guide",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/blog/webp-vs-jpg-guide",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/blog/gif-to-webm-guide",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/blog/gif-to-webm-guide",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/blog/favicon-size-guide",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/blog/favicon-size-guide",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/blog/aspect-ratio-guide",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/blog/aspect-ratio-guide",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    }
+  ],
+  "linkChecks": [
+    {
+      "pathname": "/",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/about",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/blog",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/blog/ai-content-creation-guide",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/blog/brand-deal-rate-calculator-guide",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/blog/character-counter-platform-limits",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/blog/compress-images-for-web",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/blog/email-subject-lines-that-get-opened",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/blog/png-vs-jpg-explained",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/blog/webp-vs-jpg-guide",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/blog/youtube-thumbnail-ctr",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/blog/youtube-thumbnail-secrets",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/categories",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/categories/ai",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/categories/designer",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/categories/image",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/categories/instagram",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/categories/pinterest",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/categories/seo",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/categories/tiktok",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/categories/youtube",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/contact",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/privacy",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/sitemap.xml",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/terms",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/ai-post-generator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/ai-thumbnail-generator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/all-in-one-creator-kit",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/bio-generator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/blog-topic-generator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/brand-deal-calculator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/bulk-resize",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/channel-name-generator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/color-palette-generator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/compress-image",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/content-idea-generator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/convert-jpg-to-png",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/convert-png-to-jpg",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/crop-image",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/description-generator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/engagement-calculator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/favicon-generator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/font-pair-generator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/gif-to-video",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/gradient-generator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/instagram-caption-generator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/instagram-earnings-calculator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/instagram-hashtag-generator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/keyword-density-checker",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/keyword-generator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/logo-size-generator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/meta-generator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/open-graph-generator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/pin-idea-generator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/pinterest-description-generator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/pinterest-title-generator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/qr-code-generator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/readability-checker",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/reel-idea-generator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/resize-image",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/robots-generator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/rotate-image",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/schema-generator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/seo-title-generator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/sitemap-generator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/social-media-size-generator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/social-post-generator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/tag-generator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/thumbnail-downloader",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/thumbnail-generator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/thumbnail-text-generator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/tiktok-caption-generator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/tiktok-earnings-calculator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/tiktok-hashtag-generator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/trend-idea-generator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/username-generator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/video-hook-generator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/video-title-generator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/viral-hook-generator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/webp-converter",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/youtube-money-calculator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    }
+  ],
+  "redirects": [
+    {
+      "name": "http apex",
+      "pathname": "/about?x=1",
+      "status": 308,
+      "target": "https://www.logoviking.com/about?x=1"
+    },
+    {
+      "name": "http www",
+      "pathname": "/about",
+      "status": 308,
+      "target": "https://www.logoviking.com/about"
+    },
+    {
+      "name": "legacy apex",
+      "pathname": "/subscription",
+      "status": 308,
+      "target": "https://www.logoviking.com/pricing"
+    },
+    {
+      "name": "legacy tool",
+      "pathname": "/tools/ai-smart-image-optimizer",
+      "status": 308,
+      "target": "https://www.logoviking.com/tools/image-optimizer"
+    },
+    {
+      "name": "trailing slash",
+      "pathname": "/tools/",
+      "status": 308,
+      "target": "/tools"
+    }
+  ],
+  "invalid": [
+    {
+      "pathname": "/tools/edit",
+      "status": 404
+    },
+    {
+      "pathname": "/tools/:slug",
+      "status": 404
+    },
+    {
+      "pathname": "/categories/:slug",
+      "status": 404
+    },
+    {
+      "pathname": "/:page",
+      "status": 404
+    },
+    {
+      "pathname": "/auth/:mode",
+      "status": 404
+    },
+    {
+      "pathname": "/path/",
+      "status": 404
+    },
+    {
+      "pathname": "/*",
+      "status": 404
+    },
+    {
+      "pathname": "/&",
+      "status": 404
+    },
+    {
+      "pathname": "/month",
+      "status": 404
+    },
+    {
+      "pathname": "/definitely-not-a-page",
+      "status": 404
+    }
+  ],
+  "problems": {
+    "non200SitemapUrls": [],
+    "canonicalMismatches": [],
+    "nonIndexableSitemapUrls": [],
+    "brokenLinks": [],
+    "redirectingLinks": [],
+    "placeholderLinks": [],
+    "invalidPathsNot404": []
+  }
+}

@@ -10,17 +10,17 @@
   "redirects": [
     {
       "source": "/index.html",
-      "destination": "/",
+      "destination": "https://www.logoviking.com/",
       "permanent": true
     },
     {
       "source": "/subscription",
-      "destination": "/pricing",
+      "destination": "https://www.logoviking.com/pricing",
       "permanent": true
     },
     {
       "source": "/tools/ai-smart-image-optimizer",
-      "destination": "/tools/image-optimizer",
+      "destination": "https://www.logoviking.com/tools/image-optimizer",
       "permanent": true
     },
     {

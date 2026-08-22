@@ -6,6 +6,11 @@
   "scripts": {
     "dev": "vite",
     "build": "npm run typecheck && vite build && node scripts/prerender.mjs",
+    "lint": "node --check server.js && node --check scripts/prerender.mjs && node --check scripts/crawl-built.mjs && node --test tests/source-seo.test.mjs",
+    "pretest": "npm run build",
+    "test": "node --test tests/*.test.mjs",
+    "crawl": "node scripts/crawl-built.mjs",
+    "verify": "npm run lint && npm test && npm run crawl",
     "start": "node server.js",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit"

@@ -1331,7 +1331,10 @@ const trustLinks = [["About","/about"],["Contact","/contact"],["Privacy","/priva
 function cleanText(s:string){return s.replace(/\s+/g," ").trim()}
 function isSpammy(s:string){return (s.match(/https?:\/\//gi)??[]).length>3||/(.)\1{12,}/.test(s)}
 function getDailyKey(){return new Date().toISOString().slice(0,10)}
-function safeFullUrl(p="/"){if(typeof window==="undefined")return`${siteDomain}${p}`;return new URL(p,window.location.origin).toString()}
+function safeFullUrl(p="/"){
+  const pathOnly=new URL(p,siteDomain).pathname;
+  return new URL(pathOnly,siteDomain).toString();
+}
 function scrollTop(){if(typeof window!=="undefined")window.scrollTo({top:0,behavior:"smooth"})}
 function getToolBySlug(slug?:string){return tools.find(t=>t.slug===slug)}
 function getBlogBySlug(slug?:string){return blogPosts.find(b=>b.slug===slug)}
@@ -1435,6 +1438,8 @@ function SeoHead({title,description,canonical,noIndex,schema}:{title:string;desc
     const ogImg=`${siteDomain}/og-image.png`;
     set("description","name",description);
     set("robots","name",noIndex?"noindex,nofollow":"index,follow");
+    set("googlebot","name",noIndex?"noindex,nofollow":"index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1");
+    set("bingbot","name",noIndex?"noindex,nofollow":"index,follow");
     set("og:title","property",full);
     set("og:description","property",description);
     set("og:url","property",url);

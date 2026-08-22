@@ -7,7 +7,7 @@ const root = path.resolve(__dirname, '..');
 const dist = path.join(root, 'dist');
 const data = JSON.parse(fs.readFileSync(path.join(__dirname, 'seo-data.json'), 'utf8'));
 const BASE = 'https://www.logoviking.com';
-const TODAY = '2026-08-14';
+const TODAY = data.lastModified;
 const templatePath = path.join(dist, 'index.html');
 if (!fs.existsSync(templatePath)) throw new Error('dist/index.html missing; run vite build first');
 const template = fs.readFileSync(templatePath, 'utf8');
@@ -22,6 +22,18 @@ const categoryMeta = {
   seo: ['SEO Tools','Free SEO utilities for metadata, schema, sitemaps, robots.txt, readability, counters, and on-page checks.'],
   ai: ['Creator Generators','Text-based creator helpers for hooks, content ideas, scripts, calendars, and social posts.']
 };
+
+const validSlug = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+if (!/^\d{4}-\d{2}-\d{2}$/.test(TODAY)) throw new Error('seo-data.json needs a YYYY-MM-DD lastModified value');
+for (const key of ['tools', 'blogs']) {
+  if (!Array.isArray(data[key])) throw new Error(`seo-data.json ${key} must be an array`);
+  const slugs = data[key].map(item => item.slug);
+  if (new Set(slugs).size !== slugs.length) throw new Error(`Duplicate ${key} slug in seo-data.json`);
+  for (const slug of slugs) if (!validSlug.test(slug)) throw new Error(`Invalid ${key} slug: ${slug}`);
+}
+for (const tool of data.tools) {
+  if (!categoryMeta[tool.category]) throw new Error(`Unknown tool category: ${tool.category}`);
+}
 
 const trust = {
   about:['About LogoViking','Learn why LogoViking exists and how we build practical creator, image, design, and SEO tools.'],
@@ -61,6 +73,8 @@ function headFor(route,title,description,{noindex=false,type='website',schema=nu
   html = html.replace(/<title>.*?<\/title>/s, `<title>${esc(stripBrand(title))}</title>`);
   html = html.replace(/<meta name="description" content="[^"]*"\s*\/>/, `<meta name="description" content="${esc(description)}" />`);
   html = html.replace(/<meta name="robots" content="[^"]*"\s*\/>/, `<meta name="robots" content="${noindex?'noindex, nofollow':'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1'}" />`);
+  html = html.replace(/<meta name="googlebot" content="[^"]*"\s*\/>/, `<meta name="googlebot" content="${noindex?'noindex, nofollow':'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1'}" />`);
+  html = html.replace(/<meta name="bingbot" content="[^"]*"\s*\/>/, `<meta name="bingbot" content="${noindex?'noindex, nofollow':'index, follow'}" />`);
   html = html.replace(/<link rel="canonical" href="[^"]*"\s*\/>/, `<link rel="canonical" href="${canonical}" />`);
   html = html.replace(/<meta property="og:title" content="[^"]*"\s*\/>/, `<meta property="og:title" content="${esc(stripBrand(title))}" />`);
   html = html.replace(/<meta property="og:description" content="[^"]*"\s*\/>/, `<meta property="og:description" content="${esc(description)}" />`);
@@ -138,7 +152,10 @@ for (const b of data.blogs){
   const route=`/blog/${b.slug}`;
   const schema={"@context":"https://schema.org","@type":"BlogPosting","headline":b.title,"description":b.description,"dateModified":TODAY,"mainEntityOfPage":{"@type":"WebPage","@id":`${BASE}${route}`},"publisher":{"@type":"Organization","name":"LogoViking","url":BASE}};
   let html=headFor(route,b.title,b.description,{type:'article',schema});
-  html=html.replace('<div id="root"></div>',bodyShell(b.title,b.description,route,`<article style="margin-top:26px"><p style="line-height:1.8;color:#4b5563">This guide is part of LogoViking's practical creator-tool library. The interactive article includes examples, FAQs, and links to related tools when JavaScript loads.</p></article>`,allBlogLinks.filter(x=>x[1]!==route)));
+  const sections = Array.isArray(b.sections) && b.sections.length
+    ? b.sections.map(section=>`<section><h2>${esc(section.title)}</h2>${section.paragraphs.map(paragraph=>`<p style="line-height:1.8;color:#4b5563">${esc(paragraph)}</p>`).join('')}</section>`).join('')
+    : `<section><h2>About this guide</h2><p style="line-height:1.8;color:#4b5563">${esc(b.description)} This guide connects the topic to practical LogoViking tools and workflows.</p></section>`;
+  html=html.replace('<div id="root"></div>',bodyShell(b.title,b.description,route,`<article style="margin-top:26px">${sections}</article>`,allBlogLinks.filter(x=>x[1]!==route)));
   writeRoute(route,html);
 }
 
@@ -175,12 +192,19 @@ const publicPages=['/','/tools','/categories','/blog','/faq','/pricing',...Objec
 const toolPages=data.tools.map(t=>`/tools/${t.slug}`);
 const categoryPages=catSlugs.map(c=>`/categories/${c}`);
 const blogPages=data.blogs.map(b=>`/blog/${b.slug}`);
+const allPublicRoutes=[...publicPages,...toolPages,...categoryPages,...blogPages];
+if (new Set(allPublicRoutes).size !== allPublicRoutes.length) throw new Error('Duplicate public route in sitemap inventory');
+for (const route of allPublicRoutes) {
+  if (/[?:*{}\\]/.test(route)) throw new Error(`Malformed public route: ${route}`);
+  const routeFile=route==='/'?path.join(dist,'index.html'):path.join(dist,`${route.slice(1)}.html`);
+  if (!fs.existsSync(routeFile)) throw new Error(`Missing prerendered route: ${route}`);
+}
 const urlXml=(routes)=>`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${routes.map(r=>`  <url><loc>${BASE}${r==='/'?'':r}</loc><lastmod>${TODAY}</lastmod></url>`).join('\n')}\n</urlset>\n`;
 fs.writeFileSync(path.join(dist,'sitemap-pages.xml'),urlXml(publicPages));
 fs.writeFileSync(path.join(dist,'sitemap-tools.xml'),urlXml(toolPages));
 fs.writeFileSync(path.join(dist,'sitemap-categories.xml'),urlXml(categoryPages));
 fs.writeFileSync(path.join(dist,'sitemap-blog.xml'),urlXml(blogPages));
-fs.writeFileSync(path.join(dist,'sitemap.xml'),urlXml([...publicPages,...toolPages,...categoryPages,...blogPages]));
+fs.writeFileSync(path.join(dist,'sitemap.xml'),urlXml(allPublicRoutes));
 fs.writeFileSync(path.join(dist,'sitemap-index.xml'),`<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${['sitemap-pages.xml','sitemap-tools.xml','sitemap-categories.xml','sitemap-blog.xml'].map(f=>`  <sitemap><loc>${BASE}/${f}</loc><lastmod>${TODAY}</lastmod></sitemap>`).join('\n')}\n</sitemapindex>\n`);
 
 console.log(`Prerendered ${data.tools.length} tools, ${data.blogs.length} blog posts, ${catSlugs.length} categories.`);
