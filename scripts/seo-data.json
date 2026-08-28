@@ -1,11 +1,11 @@
 {
-  "lastModified": "2026-08-22",
+  "lastModified": "2026-08-27",
   "tools": [
     {
       "slug": "all-in-one-creator-kit",
       "name": "All-in-One Creator Kit",
       "category": "ai",
-      "description": "One topic \u2192 titles, hashtags, thumbnails, captions, keywords, and content ideas. Your fastest path to publish-ready assets."
+      "description": "One topic → titles, hashtags, thumbnails, captions, keywords, and content ideas. Your fastest path to publish-ready assets."
     },
     {
       "slug": "compress-image",
@@ -17,7 +17,51 @@
       "slug": "resize-image",
       "name": "Resize Image",
       "category": "image",
-      "description": "Resize images to exact dimensions for any platform or use case."
+      "description": "Resize JPG, PNG, and WebP images to exact pixel dimensions in your browser while preserving aspect ratio.",
+      "seoTitle": "Resize Image Online — Free Image Resizer",
+      "h1": "Resize Image Online",
+      "intro": "Resize an image to exact pixel dimensions in your browser. Keep aspect ratio enabled to prevent stretching, then download the resized image for websites, marketplaces, email, or social media.",
+      "sections": [
+        {
+          "title": "How to resize an image without distortion",
+          "paragraphs": [
+            "Start from the original image dimensions, choose the width you actually need, and keep the aspect-ratio lock on unless you intentionally want a different shape.",
+            "Downscaling usually preserves appearance well. Upscaling cannot create missing detail and may make a small source image look softer or pixelated."
+          ]
+        },
+        {
+          "title": "Resize before you compress for the web",
+          "paragraphs": [
+            "A website rarely needs a 5000-pixel-wide photo if the image is displayed at 1200 pixels. Reducing dimensions first removes unnecessary pixels before compression.",
+            "After resizing, use the Image Compressor or a WebP converter when smaller transfer size matters. Keep the original file as your master copy."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How do I resize an image without stretching it?",
+          "answer": "Keep aspect ratio enabled and change one dimension. The matching dimension should scale proportionally."
+        },
+        {
+          "question": "Does resizing an image reduce quality?",
+          "answer": "Downscaling is usually safe when the source is good. Enlarging a small image can soften details because resizing cannot recreate pixels that were never present."
+        },
+        {
+          "question": "Should I resize an image before compressing it?",
+          "answer": "Yes when the original dimensions are larger than the final display size. Resizing first often produces a much smaller final web image."
+        }
+      ],
+      "relatedTools": [
+        "compress-image",
+        "image-dimensions",
+        "aspect-ratio-calculator",
+        "webp-converter"
+      ],
+      "relatedBlogs": [
+        "compress-images-for-web",
+        "etsy-image-size-guide",
+        "aspect-ratio-guide"
+      ]
     },
     {
       "slug": "bulk-resize",
@@ -107,7 +151,7 @@
       "slug": "background-remover",
       "name": "AI Background Remover",
       "category": "image",
-      "description": "Remove image backgrounds with AI \u2014 100% in your browser, nothing uploaded."
+      "description": "Remove image backgrounds with AI — 100% in your browser, nothing uploaded."
     },
     {
       "slug": "blur-background",
@@ -141,9 +185,51 @@
     },
     {
       "slug": "gradient-generator",
-      "name": "Gradient Generator",
+      "name": "Color Gradient Generator",
       "category": "designer",
-      "description": "Create CSS gradients visually and copy the code."
+      "description": "Create linear and radial CSS color gradients, preview them live, adjust direction or angle, and copy the CSS.",
+      "seoTitle": "Color Gradient Generator — CSS Linear & Radial Gradients",
+      "h1": "Color Gradient Generator",
+      "intro": "Create a CSS color gradient visually, preview it as you edit, and copy the ready-to-use background code. Choose two colors, switch between linear and radial gradients, and set a preset direction or custom angle.",
+      "sections": [
+        {
+          "title": "Create a CSS gradient visually",
+          "paragraphs": [
+            "Pick the two colors you want to blend and choose a linear or radial gradient. The preview updates immediately so you can judge the transition before copying the CSS.",
+            "For linear gradients, use a preset direction or enter a custom angle from 0 to 360 degrees."
+          ]
+        },
+        {
+          "title": "Linear gradients vs radial gradients",
+          "paragraphs": [
+            "Linear gradients blend colors along a line and work well for buttons, hero backgrounds, cards, and overlays. Radial gradients spread outward from a center point and can create spotlight or glow effects.",
+            "Copy the generated CSS into a background property, then test text contrast and readability on top of the gradient in the final design."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "What CSS does the color gradient generator create?",
+          "answer": "It creates a CSS background declaration using linear-gradient() or radial-gradient() with the colors and direction you choose."
+        },
+        {
+          "question": "Can I set a custom gradient angle?",
+          "answer": "Yes. For linear gradients you can choose a preset direction or enter a custom angle between 0 and 360 degrees."
+        },
+        {
+          "question": "Can I copy the gradient CSS?",
+          "answer": "Yes. The tool shows the generated background code and provides a copy button."
+        }
+      ],
+      "relatedTools": [
+        "color-palette-generator",
+        "color-picker",
+        "font-pair-generator"
+      ],
+      "relatedBlogs": [
+        "aspect-ratio-guide",
+        "youtube-thumbnail-secrets"
+      ]
     },
     {
       "slug": "font-pair-generator",
@@ -153,9 +239,52 @@
     },
     {
       "slug": "gif-to-video",
-      "name": "GIF to WebM/MP4",
+      "name": "GIF to WebM Converter",
       "category": "designer",
-      "description": "Convert GIFs to lightweight WebM or MP4 for faster websites \u2014 with embed code included."
+      "description": "Convert animated GIF files to downloadable WebM video in supported browsers, with looping HTML and MP4/ffmpeg guidance.",
+      "seoTitle": "GIF to WebM Converter — Convert GIF to WebM Online",
+      "h1": "GIF to WebM Converter",
+      "intro": "Convert an animated GIF to WebM directly in supported browsers. Choose a capture duration, download the WebM result, and copy looping video HTML for a website. MP4 and frame-perfect conversion guidance is included through ffmpeg.",
+      "sections": [
+        {
+          "title": "Why convert GIF to WebM for a website?",
+          "paragraphs": [
+            "Animated GIF is convenient, but it is inefficient for many full-color animations. WebM uses modern video compression and can often deliver the same visual loop with fewer transferred bytes.",
+            "For decorative or repeating website motion, a muted autoplaying video with loop and playsinline can replace a GIF while keeping familiar animation behavior."
+          ]
+        },
+        {
+          "title": "Browser conversion and MP4 workflow",
+          "paragraphs": [
+            "LogoViking uses the browser MediaRecorder API when WebM encoding is supported. The result is recorded for the duration you choose, so select a duration that captures the loop you need.",
+            "If you need MP4 output, exact frame timing, or a browser that cannot encode WebM, use the ffmpeg commands shown in the tool."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Can I convert GIF to WebM online with LogoViking?",
+          "answer": "Yes in browsers that support WebM recording through MediaRecorder. The tool records the animated GIF for the duration you select and provides a downloadable WebM file."
+        },
+        {
+          "question": "Is WebM usually smaller than GIF?",
+          "answer": "For many full-color animations, modern video compression is more efficient than GIF. The actual reduction depends on the animation, dimensions, frame rate, and encoding settings."
+        },
+        {
+          "question": "Can the tool create MP4 too?",
+          "answer": "The browser workflow produces WebM. The page also provides ffmpeg commands for MP4 or frame-accurate conversion."
+        }
+      ],
+      "relatedTools": [
+        "compress-image",
+        "image-optimizer",
+        "aspect-ratio-calculator"
+      ],
+      "relatedBlogs": [
+        "gif-to-webm-guide",
+        "compress-images-for-web",
+        "webp-vs-jpg-guide"
+      ]
     },
     {
       "slug": "qr-code-generator",
@@ -165,9 +294,53 @@
     },
     {
       "slug": "logo-size-generator",
-      "name": "Logo Size Guide",
+      "name": "Logo Size Generator & Guide",
       "category": "designer",
-      "description": "Get the correct logo dimensions for every platform."
+      "description": "Find logo, profile, banner, favicon, and social image dimensions for popular platforms and copy the size list.",
+      "seoTitle": "Logo Size Generator — Logo Dimensions for Social & Web",
+      "h1": "Logo Size Generator & Guide",
+      "intro": "Look up practical logo and brand-image dimensions for websites and popular social platforms. Filter by platform, compare common use cases, and copy the size list for your design handoff.",
+      "sections": [
+        {
+          "title": "Start with a flexible master logo",
+          "paragraphs": [
+            "Keep a high-resolution master logo, ideally in a vector format when available, then export platform-specific raster copies from that source. Avoid repeatedly resizing a small downloaded logo upward.",
+            "Square profile images, wide banners, website favicons, and social preview images all use different aspect ratios, so one exported file rarely fits every destination."
+          ]
+        },
+        {
+          "title": "Logo size is not the same as display size",
+          "paragraphs": [
+            "Platforms often resize uploaded branding assets for different screens. Prepare the recommended upload dimensions, keep important artwork inside safe areas, and preview the result after upload.",
+            "For website icons, use the Favicon Generator. For proportional resizing, use Resize Image or the Aspect Ratio Calculator before exporting."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "What size should a logo be?",
+          "answer": "There is no single universal logo size. The correct dimensions depend on whether the logo is used as a profile image, banner, website header, favicon, email logo, or social preview."
+        },
+        {
+          "question": "Should I keep a vector version of my logo?",
+          "answer": "Yes when possible. SVG, AI, EPS, or another vector master can be exported cleanly at many raster sizes without repeatedly enlarging a small bitmap."
+        },
+        {
+          "question": "What size should a website favicon be?",
+          "answer": "Common favicon outputs include 16×16 and 32×32 pixels, with larger app-icon sizes used for touch icons and manifests."
+        }
+      ],
+      "relatedTools": [
+        "favicon-generator",
+        "social-media-size-generator",
+        "resize-image",
+        "aspect-ratio-calculator"
+      ],
+      "relatedBlogs": [
+        "favicon-size-guide",
+        "etsy-image-size-guide",
+        "aspect-ratio-guide"
+      ]
     },
     {
       "slug": "social-media-size-generator",
@@ -401,7 +574,7 @@
       "slug": "character-counter",
       "name": "Character Counter",
       "category": "seo",
-      "description": "Count characters for Twitter, Instagram, TikTok, YouTube, and LinkedIn \u2014 all platform limits in one view."
+      "description": "Count characters for Twitter, Instagram, TikTok, YouTube, and LinkedIn — all platform limits in one view."
     },
     {
       "slug": "word-counter",
@@ -461,7 +634,7 @@
       "slug": "email-subject-generator",
       "name": "Email Subject Generator",
       "category": "ai",
-      "description": "Generate email subject lines that maximize open rates \u2014 A/B test variations included."
+      "description": "Generate email subject lines that maximize open rates — A/B test variations included."
     },
     {
       "slug": "content-calendar-generator",
@@ -473,7 +646,7 @@
       "slug": "video-script-generator",
       "name": "Video Script Generator",
       "category": "ai",
-      "description": "Generate a complete video script \u2014 hook, intro, body, CTA, and outro \u2014 from any topic."
+      "description": "Generate a complete video script — hook, intro, body, CTA, and outro — from any topic."
     },
     {
       "slug": "brand-deal-calculator",
@@ -501,7 +674,7 @@
     {
       "slug": "character-counter-platform-limits",
       "title": "Character Counter: Every Platform's Limit in 2026",
-      "description": "Twitter, Instagram, TikTok, YouTube, LinkedIn \u2014 all character limits in one guide, with a free counter tool that checks all platforms at once."
+      "description": "Twitter, Instagram, TikTok, YouTube, LinkedIn — all character limits in one guide, with a free counter tool that checks all platforms at once."
     },
     {
       "slug": "email-subject-lines-that-get-opened",
@@ -511,7 +684,7 @@
     {
       "slug": "brand-deal-rate-calculator-guide",
       "title": "How Much to Charge for Brand Deals: Rates, Formulas, and Negotiation",
-      "description": "The complete creator's guide to pricing brand deals \u2014 with rates by platform, niche multipliers, deliverable pricing, and negotiation scripts that work."
+      "description": "The complete creator's guide to pricing brand deals — with rates by platform, niche multipliers, deliverable pricing, and negotiation scripts that work."
     },
     {
       "slug": "png-vs-jpg-explained",
@@ -536,8 +709,66 @@
     },
     {
       "slug": "compress-images-for-web",
-      "title": "How to Compress Images for the Web Without Ruining Quality",
-      "description": "A practical guide to smaller JPG, PNG, and WebP files for faster websites, email, and uploads."
+      "title": "How to Compress Images for Websites Without Ruining Quality",
+      "description": "Learn how to compress images for websites: resize oversized files, choose JPG, PNG, or WebP, tune quality, and check the result before publishing.",
+      "seoTitle": "Compress Images for Websites — JPG, PNG & WebP Guide",
+      "h1": "How to Compress Images for Websites Without Ruining Quality",
+      "sections": [
+        {
+          "title": "Why image compression matters for websites",
+          "paragraphs": [
+            "Large image files increase page weight and can make pages feel slow, especially on mobile connections. The goal is not the smallest possible file at any cost; it is the smallest file that still looks good at the dimensions visitors will actually see.",
+            "Keep an original master copy, then create an optimized delivery version for the website."
+          ]
+        },
+        {
+          "title": "Resize oversized images before compressing",
+          "paragraphs": [
+            "If a photo is 5000 pixels wide but the page displays it near 1200 pixels, resize it first. Removing unused pixels usually saves more than repeatedly lowering quality on the oversized original.",
+            "Check the target layout, resize to the needed dimensions, then compress the resized copy."
+          ]
+        },
+        {
+          "title": "Choose JPG, PNG, or WebP for the job",
+          "paragraphs": [
+            "JPG works well for photographs when transparency is not required. PNG is useful for screenshots, line art, and transparent graphics. WebP is a practical web-delivery format when you want modern compression with broad current-browser support.",
+            "Do not convert automatically just because a format is newer. Compare the image at its final display size and choose the format that gives an acceptable visual result at a useful file size."
+          ]
+        },
+        {
+          "title": "A practical website image-compression workflow",
+          "paragraphs": [
+            "Check the original dimensions, resize if necessary, compress the delivery copy, and compare the before-and-after file sizes. Inspect text, faces, gradients, and sharp edges at normal viewing size before publishing.",
+            "LogoViking includes an Image Compressor, Image Dimensions Checker, Image Resizer, and JPG/PNG-to-WebP tools so those steps can stay in one workflow."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How much should I compress images for a website?",
+          "answer": "Use the lowest file size that still looks good at the final display size. There is no single quality percentage or kilobyte target that works for every photo, graphic, or layout."
+        },
+        {
+          "question": "Should I resize images before compressing them?",
+          "answer": "Yes when the source dimensions are larger than the page needs. Resizing first removes unnecessary pixels and usually improves the final size-to-quality balance."
+        },
+        {
+          "question": "Is WebP always better than JPG or PNG?",
+          "answer": "No. WebP is often efficient for web delivery, but the best choice depends on transparency, image content, workflow compatibility, and the visual result after compression."
+        }
+      ],
+      "relatedTools": [
+        "compress-image",
+        "resize-image",
+        "image-dimensions",
+        "jpg-to-webp",
+        "png-to-webp"
+      ],
+      "relatedBlogs": [
+        "webp-vs-jpg-guide",
+        "png-vs-jpg-explained",
+        "gif-to-webm-guide"
+      ]
     },
     {
       "slug": "webp-vs-jpg-guide",
@@ -558,6 +789,72 @@
       "slug": "aspect-ratio-guide",
       "title": "Aspect Ratio Guide for YouTube, Instagram, TikTok, and Websites",
       "description": "Understand 16:9, 9:16, 1:1, 4:5, and other ratios, then calculate missing dimensions without distortion."
+    },
+    {
+      "slug": "etsy-image-size-guide",
+      "title": "Etsy Image Sizes: Listing Photos, Banners & Shop Graphics",
+      "seoTitle": "Etsy Image Sizes — Listing Photos & Shop Banners",
+      "h1": "Etsy Image Sizes: Listing Photos, Banners & Shop Graphics",
+      "description": "Current Etsy image-size guidance for listing photos, shop banners, and seller graphics, plus practical resize and compression steps before upload.",
+      "sections": [
+        {
+          "title": "Etsy listing image size basics",
+          "paragraphs": [
+            "Etsy currently recommends listing photos with both width and height of at least 2000 pixels. Etsy also says the first listing photo should be at least 635 pixels in both dimensions to avoid a possible search-visibility disadvantage.",
+            "For the first listing image, Etsy recommends a horizontal or square orientation so the focal point survives thumbnail crops. Using a consistent shape across listing photos also creates a more cohesive gallery."
+          ]
+        },
+        {
+          "title": "Etsy shop banner sizes",
+          "paragraphs": [
+            "For standard shop customization, Etsy lists a minimum size of 1200×160 pixels for a Mini Banner and 1200×300 pixels for a Big Banner. Etsy Plus carousel banner images also use a 1200×300 pixel minimum.",
+            "Prepare important text and logos with generous safe space because banners may be displayed at different sizes on desktop and mobile."
+          ]
+        },
+        {
+          "title": "Etsy image formats and transparency",
+          "paragraphs": [
+            "Etsy supports JPG, GIF, PNG, SVG, and HEIC shop images. Etsy notes that animated GIF files and transparent PNG files are not supported as expected; transparent areas can appear black after upload.",
+            "For product photography, JPG is a straightforward choice. For graphics that need transparency elsewhere, keep a transparent master copy and export an Etsy-ready version with a solid background when necessary."
+          ]
+        },
+        {
+          "title": "Resize and compress Etsy images before upload",
+          "paragraphs": [
+            "Start with a clean master image, crop for the listing composition, resize to the dimensions you need, and then compress the upload copy without making product details hard to inspect.",
+            "If uploads are slow, reduce unnecessary file weight rather than shrinking a high-quality product image below Etsy’s recommended dimensions. Use the Image Dimensions Checker before resizing so you know the exact starting size."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "What size should Etsy listing photos be?",
+          "answer": "Etsy currently recommends listing photos with both width and height of at least 2000 pixels. The first listing image should be at least 635 pixels in both dimensions."
+        },
+        {
+          "question": "Should the first Etsy listing photo be square or landscape?",
+          "answer": "Etsy recommends the first listing photo be horizontal or square so the main subject is less likely to be cut off in thumbnail crops."
+        },
+        {
+          "question": "Does Etsy support WebP listing images?",
+          "answer": "Etsy’s current supported shop-image list includes JPG, GIF, PNG, SVG, and HEIC. WebP is not included in that list, so use a supported format for Etsy uploads."
+        },
+        {
+          "question": "Can I upload a transparent PNG to Etsy?",
+          "answer": "Etsy says transparent PNG files are not supported as transparent images; transparent areas can appear black. Export a version with an intentional background when needed."
+        }
+      ],
+      "relatedTools": [
+        "resize-image",
+        "compress-image",
+        "image-dimensions",
+        "aspect-ratio-calculator"
+      ],
+      "relatedBlogs": [
+        "compress-images-for-web",
+        "png-vs-jpg-explained",
+        "aspect-ratio-guide"
+      ]
     }
   ]
 }
