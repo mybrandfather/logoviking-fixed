@@ -16,6 +16,20 @@ test('base metadata exposes only canonical, clean public URLs', () => {
   assert.doesNotMatch(html, /href="[^"#]*(?::slug|:page|:mode|\{search|\/&(?:"|\/)|\/\*)/i);
 });
 
+test('critical boot handoff prevents the prerender shell from flashing', () => {
+  const html = read('index.html');
+  const main = read('src/main.tsx');
+  assert.ok(html.indexOf("classList.add('lv-js')") < html.indexOf('<body>'), 'JS marker must run before body paint');
+  assert.ok(html.indexOf('id="lv-boot-style"') < html.indexOf('<body>'), 'critical boot CSS must be inline in head');
+  assert.match(html, /html\.lv-js #lv-prerender-shell \{ visibility: hidden; \}/);
+  assert.match(html, /html\.lv-app-failed #lv-prerender-shell \{ visibility: visible; \}/);
+  assert.ok(html.indexOf('id="lv-app-boot"') < html.indexOf('id="root"'), 'boot surface must precede the React root');
+  assert.match(html, /src="\/src\/main\.tsx" onerror="document\.documentElement\.classList\.add\('lv-app-failed'\)"/);
+  assert.match(main, /new MutationObserver/);
+  assert.match(main, /if \(!document\.getElementById\("lv-prerender-shell"\)\) markAppReady\(\)/);
+  assert.match(main, /classList\.add\("lv-app-ready"\)/);
+});
+
 test('robots rules protect private routes without crawler-specific overrides', () => {
   const robots = read('public/robots.txt');
   assert.equal((robots.match(/^User-agent:/gm) ?? []).length, 1);

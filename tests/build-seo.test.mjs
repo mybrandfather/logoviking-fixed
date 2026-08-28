@@ -41,6 +41,9 @@ test('every sitemap page is self-canonical, indexable, and prerendered', () => {
     assert.match(html, /<meta name="robots" content="index, follow/);
     assert.match(html, /<meta name="googlebot" content="index, follow/);
     assert.match(html, /<h1\b[^>]*>.+?<\/h1>/s);
+    assert.match(html, /<div id="lv-app-boot" aria-hidden="true">/);
+    assert.match(html, /html\.lv-js #lv-prerender-shell \{ visibility: hidden; \}/);
+    assert.doesNotMatch(html, /Loading the interactive LogoViking workspace/i);
     assert.ok(html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().length > 180, `thin ${parsed.pathname}`);
     assert.doesNotMatch(html, /https:\/\/logoviking\.com(?:[\/'"]|$)/i);
     assert.doesNotMatch(html, /(?:href|url|urlTemplate)[=:]["'][^"']*(?::slug|:page|:mode|\{search|\/&(?:\/|$)|\/\*)/i);
