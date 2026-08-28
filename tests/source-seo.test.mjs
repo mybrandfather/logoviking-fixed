@@ -16,17 +16,23 @@ test('base metadata exposes only canonical, clean public URLs', () => {
   assert.doesNotMatch(html, /href="[^"#]*(?::slug|:page|:mode|\{search|\/&(?:"|\/)|\/\*)/i);
 });
 
-test('critical boot handoff prevents the prerender shell from flashing', () => {
+test('critical handoff paints no temporary UI before React mounts', () => {
   const html = read('index.html');
   const main = read('src/main.tsx');
+  const criticalCss = html.match(/<style id="lv-boot-style">([\s\S]*?)<\/style>/)?.[1] ?? '';
   assert.ok(html.indexOf("classList.add('lv-js')") < html.indexOf('<body>'), 'JS marker must run before body paint');
   assert.ok(html.indexOf('id="lv-boot-style"') < html.indexOf('<body>'), 'critical boot CSS must be inline in head');
   assert.match(html, /html\.lv-js #lv-prerender-shell \{ visibility: hidden; \}/);
   assert.match(html, /html\.lv-app-failed #lv-prerender-shell \{ visibility: visible; \}/);
-  assert.ok(html.indexOf('id="lv-app-boot"') < html.indexOf('id="root"'), 'boot surface must precede the React root');
+  assert.match(criticalCss, /background: #f9fafb/);
+  assert.match(criticalCss, /background: #030712/);
+  assert.doesNotMatch(html, /lv-app-boot|lv-boot-(?:header|brand|line|card|grid|panel|pulse)/);
+  assert.doesNotMatch(criticalCss, /animation|opacity|transition/);
   assert.match(html, /src="\/src\/main\.tsx" onerror="document\.documentElement\.classList\.add\('lv-app-failed'\)"/);
-  assert.match(main, /new MutationObserver/);
-  assert.match(main, /if \(!document\.getElementById\("lv-prerender-shell"\)\) markAppReady\(\)/);
+  assert.doesNotMatch(main, /MutationObserver|requestAnimationFrame/);
+  assert.match(main, /useLayoutEffect\(\(\) =>/);
+  assert.match(main, /const prerenderMarkup = rootElement\.innerHTML/);
+  assert.match(main, /class AppErrorBoundary/);
   assert.match(main, /classList\.add\("lv-app-ready"\)/);
 });
 

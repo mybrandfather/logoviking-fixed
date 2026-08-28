@@ -1,4 +1,4 @@
-import { StrictMode } from "react";
+import { Component, StrictMode, useLayoutEffect, type ErrorInfo, type ReactNode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import "./index.css";
@@ -11,36 +11,52 @@ if (!rootElement) {
   throw new Error("LogoViking root element is missing");
 }
 
-const prerenderShell = document.getElementById("lv-prerender-shell");
-let mountObserver: MutationObserver | undefined;
+const prerenderMarkup = rootElement.innerHTML;
 
-const markAppReady = () => {
-  mountObserver?.disconnect();
-  document.documentElement.classList.remove("lv-app-failed");
-  document.documentElement.classList.add("lv-app-ready");
-};
+function AppReady() {
+  useLayoutEffect(() => {
+    document.documentElement.classList.remove("lv-app-failed");
+    document.documentElement.classList.add("lv-app-ready");
+  }, []);
+  return null;
+}
 
-try {
-  if (prerenderShell) {
-    mountObserver = new MutationObserver(() => {
-      if (!document.getElementById("lv-prerender-shell")) markAppReady();
-    });
-    mountObserver.observe(rootElement, { childList: true, subtree: true });
+class AppErrorBoundary extends Component<
+  { fallbackMarkup: string; children: ReactNode },
+  { failed: boolean }
+> {
+  state = { failed: false };
+
+  static getDerivedStateFromError() {
+    return { failed: true };
   }
 
+  componentDidCatch(error: Error, info: ErrorInfo) {
+    document.documentElement.classList.add("lv-app-failed");
+    console.error("LogoViking failed to mount", error, info);
+  }
+
+  render() {
+    if (this.state.failed) {
+      return <div dangerouslySetInnerHTML={{ __html: this.props.fallbackMarkup }} />;
+    }
+    return this.props.children;
+  }
+}
+
+try {
   createRoot(rootElement).render(
     <StrictMode>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <AppErrorBoundary fallbackMarkup={prerenderMarkup}>
+        <BrowserRouter>
+          <App />
+          <AppReady />
+        </BrowserRouter>
+      </AppErrorBoundary>
     </StrictMode>
   );
-
-  // Development starts with an empty root, so there is no prerender shell for
-  // the observer to detect. Wait one frame before revealing the application.
-  if (!prerenderShell) requestAnimationFrame(markAppReady);
 } catch (error) {
-  mountObserver?.disconnect();
+  rootElement.innerHTML = prerenderMarkup;
   document.documentElement.classList.add("lv-app-failed");
   throw error;
 }
