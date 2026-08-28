@@ -27,83 +27,29 @@
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="format-detection" content="telephone=no" />
 
-    <!-- Critical boot handoff: keep prerendered route content in the HTML for
-         crawlers and no-JS users, while JavaScript users see one stable,
-         brand-consistent loading surface until React has actually mounted. -->
+    <!-- Keep prerendered route content in the HTML for crawlers and no-JS
+         users. JavaScript users get only the application's real background
+         before React's first commit—never an intermediate loading interface. -->
     <script>
-      document.documentElement.classList.add('lv-js');
+      (function () {
+        var root = document.documentElement;
+        root.classList.add('lv-js');
+        try {
+          var storedTheme = JSON.parse(localStorage.getItem('lv-theme'));
+          if (storedTheme === 'dark' || (!storedTheme && matchMedia('(prefers-color-scheme: dark)').matches)) {
+            root.classList.add('dark');
+          }
+        } catch (_) {
+          if (matchMedia('(prefers-color-scheme: dark)').matches) root.classList.add('dark');
+        }
+      }());
     </script>
     <style id="lv-boot-style">
-      #lv-app-boot { display: none; }
-      html.lv-js body { margin: 0; background: #f8fafc; }
+      html.lv-js, html.lv-js body, html.lv-js #root { min-height: 100%; background: #f9fafb; }
+      html.lv-js body { margin: 0; }
+      html.lv-js.dark, html.lv-js.dark body, html.lv-js.dark #root { background: #030712; }
       html.lv-js #lv-prerender-shell { visibility: hidden; }
-      html.lv-js #lv-app-boot {
-        position: fixed;
-        inset: 0;
-        z-index: 2147483647;
-        display: block;
-        overflow: hidden;
-        background: #f8fafc;
-        color: #111827;
-        font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        opacity: 1;
-        visibility: visible;
-        transition: opacity 160ms ease, visibility 160ms ease;
-      }
-      html.lv-app-ready #lv-app-boot,
-      html.lv-app-failed #lv-app-boot { opacity: 0; visibility: hidden; pointer-events: none; }
       html.lv-app-failed #lv-prerender-shell { visibility: visible; }
-      #lv-app-boot .lv-boot-header {
-        height: 72px;
-        border-bottom: 1px solid #e5e7eb;
-        background: #fff;
-        display: flex;
-        align-items: center;
-      }
-      #lv-app-boot .lv-boot-header-inner,
-      #lv-app-boot .lv-boot-main { width: min(1240px, 100%); margin: 0 auto; padding: 0 24px; }
-      #lv-app-boot .lv-boot-brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 18px; }
-      #lv-app-boot .lv-boot-mark {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        display: grid;
-        place-items: center;
-        color: #fff;
-        font-size: 12px;
-        background: linear-gradient(135deg, #d4a017, #7c3aed);
-        box-shadow: 0 6px 18px rgba(124, 58, 237, .22);
-      }
-      #lv-app-boot .lv-boot-brand-gold { color: #a16207; }
-      #lv-app-boot .lv-boot-main { padding-top: 44px; }
-      #lv-app-boot .lv-boot-line,
-      #lv-app-boot .lv-boot-card { animation: lv-boot-pulse 1.4s ease-in-out infinite alternate; }
-      #lv-app-boot .lv-boot-line { height: 14px; border-radius: 999px; background: #e5e7eb; }
-      #lv-app-boot .lv-boot-line-short { width: 32%; min-width: 180px; }
-      #lv-app-boot .lv-boot-line-long { width: 58%; margin-top: 12px; }
-      #lv-app-boot .lv-boot-card {
-        height: 210px;
-        margin-top: 30px;
-        border-radius: 24px;
-        background: linear-gradient(120deg, #7c3aed, #4f46e5);
-        box-shadow: 0 24px 60px rgba(79, 70, 229, .16);
-      }
-      #lv-app-boot .lv-boot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 22px; }
-      #lv-app-boot .lv-boot-panel { height: 150px; border: 1px solid #e5e7eb; border-radius: 20px; background: #fff; }
-      @keyframes lv-boot-pulse { from { opacity: .72; } to { opacity: 1; } }
-      @media (max-width: 640px) {
-        #lv-app-boot .lv-boot-header { height: 64px; }
-        #lv-app-boot .lv-boot-header-inner,
-        #lv-app-boot .lv-boot-main { padding-left: 16px; padding-right: 16px; }
-        #lv-app-boot .lv-boot-main { padding-top: 28px; }
-        #lv-app-boot .lv-boot-card { height: 180px; border-radius: 20px; }
-        #lv-app-boot .lv-boot-grid { grid-template-columns: 1fr; }
-        #lv-app-boot .lv-boot-panel { height: 120px; }
-      }
-      @media (prefers-reduced-motion: reduce) {
-        #lv-app-boot .lv-boot-line,
-        #lv-app-boot .lv-boot-card { animation: none; }
-      }
     </style>
 
     <!-- Canonical -->
@@ -198,19 +144,6 @@
 
   </head>
   <body>
-    <div id="lv-app-boot" aria-hidden="true">
-      <div class="lv-boot-header">
-        <div class="lv-boot-header-inner">
-          <div class="lv-boot-brand"><span class="lv-boot-mark">LV</span><span>Logo<span class="lv-boot-brand-gold">Viking</span></span></div>
-        </div>
-      </div>
-      <main class="lv-boot-main">
-        <div class="lv-boot-line lv-boot-line-short"></div>
-        <div class="lv-boot-line lv-boot-line-long"></div>
-        <div class="lv-boot-card"></div>
-        <div class="lv-boot-grid"><div class="lv-boot-panel"></div><div class="lv-boot-panel"></div></div>
-      </main>
-    </div>
     <div id="root"></div>
     <noscript>
       <div style="font-family:system-ui;padding:32px;max-width:640px;margin:0 auto;text-align:center">
