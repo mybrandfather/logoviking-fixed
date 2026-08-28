@@ -128,13 +128,26 @@ for (const [route,title,desc,links] of [
 for (const t of data.tools){
   const route=`/tools/${t.slug}`;
   const spec=specificCopy[t.slug];
-  const title=spec?.[0] || `${t.name} — Free Online Tool`;
-  const desc=spec?.[1] || t.description;
-  const extra=`<section style="margin-top:28px"><h2>About ${esc(t.name)}</h2><p style="line-height:1.7;color:#4b5563">${esc(spec?.[2] || `Use ${t.name} for a focused ${t.category} workflow. Review the result before publishing and keep source files when the output changes format or quality.`)}</p><h2>How to use it</h2><ol style="line-height:1.8;color:#4b5563"><li>Open the tool and provide the required image, text, URL, or values.</li><li>Adjust the available settings and review the result.</li><li>Copy or download the output and verify it in the destination platform.</li></ol></section>`;
-  const related=data.tools.filter(x=>x.category===t.category&&x.slug!==t.slug).slice(0,6).map(x=>[x.name,`/tools/${x.slug}`]);
-  const schema={"@context":"https://schema.org","@type":"WebApplication","name":t.name,"url":`${BASE}${route}`,"description":desc,"applicationCategory":['image','designer'].includes(t.category)?'DesignApplication':'UtilitiesApplication',"operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}};
+  const title=t.seoTitle || spec?.[0] || `${t.name} — Free Online Tool`;
+  const h1=t.h1 || spec?.[0] || t.name;
+  const desc=t.description || spec?.[1] || `Use ${t.name} on LogoViking.`;
+  const intro=t.intro || spec?.[2] || `Use ${t.name} for a focused ${t.category} workflow. Review the result before publishing and keep source files when the output changes format or quality.`;
+  const howTo=`<section><h2>How to use ${esc(h1)}</h2><ol style="line-height:1.8;color:#cbd5e1"><li>Open the tool and provide the image, colors, text, URL, or values it needs.</li><li>Adjust the available settings while reviewing the result.</li><li>Copy or download the output and verify it in the destination platform.</li></ol></section>`;
+  const sections=Array.isArray(t.sections)?t.sections.map(section=>`<section><h2>${esc(section.title)}</h2>${section.paragraphs.map(paragraph=>`<p style="line-height:1.8;color:#cbd5e1">${esc(paragraph)}</p>`).join('')}</section>`).join(''):'';
+  const faqs=Array.isArray(t.faqs)?t.faqs:[];
+  const faqHtml=faqs.length?`<section><h2>${esc(h1)} FAQ</h2>${faqs.map(f=>`<h3>${esc(f.question)}</h3><p style="line-height:1.8;color:#cbd5e1">${esc(f.answer)}</p>`).join('')}</section>`:'';
+  const relatedToolSlugs=Array.isArray(t.relatedTools)?t.relatedTools:[];
+  const relatedBlogSlugs=Array.isArray(t.relatedBlogs)?t.relatedBlogs:[];
+  const relatedTools=(relatedToolSlugs.length?relatedToolSlugs.map(slug=>data.tools.find(x=>x.slug===slug)).filter(Boolean):data.tools.filter(x=>x.category===t.category&&x.slug!==t.slug).slice(0,6)).map(x=>[x.name,`/tools/${x.slug}`]);
+  const relatedBlogs=relatedBlogSlugs.map(slug=>data.blogs.find(x=>x.slug===slug)).filter(Boolean).map(x=>[x.title,`/blog/${x.slug}`]);
+  const links=[...relatedTools,...relatedBlogs,[categoryMeta[t.category][0],`/categories/${t.category}`]];
+  const appSchema={"@type":"WebApplication","name":h1,"url":`${BASE}${route}`,"description":desc,"applicationCategory":['image','designer'].includes(t.category)?'DesignApplication':'UtilitiesApplication',"operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}};
+  const graph=[appSchema];
+  if(faqs.length)graph.push({"@type":"FAQPage","mainEntity":faqs.map(f=>({"@type":"Question","name":f.question,"acceptedAnswer":{"@type":"Answer","text":f.answer}}))});
+  const schema={"@context":"https://schema.org","@graph":graph};
   let html=headFor(route,title,desc,{schema});
-  html=html.replace('<div id="root"></div>',bodyShell(title,desc,route,extra,related));
+  const extra=`<section style="margin-top:28px"><p style="line-height:1.8;color:#cbd5e1">${esc(intro)}</p></section>${howTo}${sections}${faqHtml}`;
+  html=html.replace('<div id="root"></div>',bodyShell(h1,desc,route,extra,links));
   writeRoute(route,html);
 }
 
@@ -150,12 +163,24 @@ for (const c of catSlugs){
 // Blogs
 for (const b of data.blogs){
   const route=`/blog/${b.slug}`;
-  const schema={"@context":"https://schema.org","@type":"BlogPosting","headline":b.title,"description":b.description,"dateModified":TODAY,"mainEntityOfPage":{"@type":"WebPage","@id":`${BASE}${route}`},"publisher":{"@type":"Organization","name":"LogoViking","url":BASE}};
-  let html=headFor(route,b.title,b.description,{type:'article',schema});
+  const title=b.seoTitle || b.title;
+  const h1=b.h1 || b.title;
+  const faqs=Array.isArray(b.faqs)?b.faqs:[];
+  const articleSchema={"@type":"BlogPosting","headline":h1,"description":b.description,"dateModified":TODAY,"mainEntityOfPage":{"@type":"WebPage","@id":`${BASE}${route}`},"publisher":{"@type":"Organization","name":"LogoViking","url":BASE}};
+  const graph=[articleSchema];
+  if(faqs.length)graph.push({"@type":"FAQPage","mainEntity":faqs.map(f=>({"@type":"Question","name":f.question,"acceptedAnswer":{"@type":"Answer","text":f.answer}}))});
+  const schema={"@context":"https://schema.org","@graph":graph};
+  let html=headFor(route,title,b.description,{type:'article',schema});
   const sections = Array.isArray(b.sections) && b.sections.length
-    ? b.sections.map(section=>`<section><h2>${esc(section.title)}</h2>${section.paragraphs.map(paragraph=>`<p style="line-height:1.8;color:#4b5563">${esc(paragraph)}</p>`).join('')}</section>`).join('')
-    : `<section><h2>About this guide</h2><p style="line-height:1.8;color:#4b5563">${esc(b.description)} This guide connects the topic to practical LogoViking tools and workflows.</p></section>`;
-  html=html.replace('<div id="root"></div>',bodyShell(b.title,b.description,route,`<article style="margin-top:26px">${sections}</article>`,allBlogLinks.filter(x=>x[1]!==route)));
+    ? b.sections.map(section=>`<section><h2>${esc(section.title)}</h2>${section.paragraphs.map(paragraph=>`<p style="line-height:1.8;color:#cbd5e1">${esc(paragraph)}</p>`).join('')}</section>`).join('')
+    : `<section><h2>About this guide</h2><p style="line-height:1.8;color:#cbd5e1">${esc(b.description)} This guide connects the topic to practical LogoViking tools and workflows.</p></section>`;
+  const faqHtml=faqs.length?`<section><h2>Frequently asked questions</h2>${faqs.map(f=>`<h3>${esc(f.question)}</h3><p style="line-height:1.8;color:#cbd5e1">${esc(f.answer)}</p>`).join('')}</section>`:'';
+  const relatedToolSlugs=Array.isArray(b.relatedTools)?b.relatedTools:[];
+  const relatedBlogSlugs=Array.isArray(b.relatedBlogs)?b.relatedBlogs:[];
+  const relatedTools=relatedToolSlugs.map(slug=>data.tools.find(x=>x.slug===slug)).filter(Boolean).map(x=>[x.name,`/tools/${x.slug}`]);
+  const relatedBlogs=(relatedBlogSlugs.length?relatedBlogSlugs.map(slug=>data.blogs.find(x=>x.slug===slug)).filter(Boolean).map(x=>[x.title,`/blog/${x.slug}`]):allBlogLinks.filter(x=>x[1]!==route).slice(0,5));
+  const links=[...relatedTools,...relatedBlogs,['Browse Image Tools','/categories/image']];
+  html=html.replace('<div id="root"></div>',bodyShell(h1,b.description,route,`<article style="margin-top:26px">${sections}${faqHtml}</article>`,links));
   writeRoute(route,html);
 }
 

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-22T18:33:48.164Z",
+  "generatedAt": "2026-08-28T01:53:49.702Z",
   "canonicalOrigin": "https://www.logoviking.com",
   "pages": [
     {
@@ -913,6 +913,14 @@
       "indexable": true,
       "redirectTarget": null,
       "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    },
+    {
+      "url": "https://www.logoviking.com/blog/etsy-image-size-guide",
+      "status": 200,
+      "canonical": "https://www.logoviking.com/blog/etsy-image-size-guide",
+      "indexable": true,
+      "redirectTarget": null,
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
     }
   ],
   "linkChecks": [
@@ -941,6 +949,12 @@
       "placeholder": false
     },
     {
+      "pathname": "/blog/aspect-ratio-guide",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
       "pathname": "/blog/brand-deal-rate-calculator-guide",
       "status": 200,
       "redirectTarget": null,
@@ -960,6 +974,24 @@
     },
     {
       "pathname": "/blog/email-subject-lines-that-get-opened",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/blog/etsy-image-size-guide",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/blog/favicon-size-guide",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/blog/gif-to-webm-guide",
       "status": 200,
       "redirectTarget": null,
       "placeholder": false
@@ -1091,6 +1123,12 @@
       "placeholder": false
     },
     {
+      "pathname": "/tools/aspect-ratio-calculator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
       "pathname": "/tools/bio-generator",
       "status": 200,
       "redirectTarget": null,
@@ -1122,6 +1160,12 @@
     },
     {
       "pathname": "/tools/color-palette-generator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/color-picker",
       "status": 200,
       "redirectTarget": null,
       "placeholder": false
@@ -1193,6 +1237,18 @@
       "placeholder": false
     },
     {
+      "pathname": "/tools/image-dimensions",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/image-optimizer",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
       "pathname": "/tools/instagram-caption-generator",
       "status": 200,
       "redirectTarget": null,
@@ -1206,6 +1262,12 @@
     },
     {
       "pathname": "/tools/instagram-hashtag-generator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/jpg-to-webp",
       "status": 200,
       "redirectTarget": null,
       "placeholder": false
@@ -1254,6 +1316,12 @@
     },
     {
       "pathname": "/tools/pinterest-title-generator",
+      "status": 200,
+      "redirectTarget": null,
+      "placeholder": false
+    },
+    {
+      "pathname": "/tools/png-to-webp",
       "status": 200,
       "redirectTarget": null,
       "placeholder": false

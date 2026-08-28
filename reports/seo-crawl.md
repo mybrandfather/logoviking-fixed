@@ -1,8 +1,8 @@
 # LogoViking built-site SEO crawl
 
-Generated: 2026-08-22T18:33:48.164Z
+Generated: 2026-08-28T01:53:49.702Z
 
-Sitemap pages: 114; status/canonical/indexability failures: 0; broken internal links: 0; placeholder links: 0.
+Sitemap pages: 115; status/canonical/indexability failures: 0; broken internal links: 0; placeholder links: 0.
 
 | URL | Status | Canonical | Indexable | Redirect target |
 |---|---:|---|:---:|---|
@@ -120,6 +120,7 @@ Sitemap pages: 114; status/canonical/indexability failures: 0; broken internal l
 | https://www.logoviking.com/blog/gif-to-webm-guide | 200 | https://www.logoviking.com/blog/gif-to-webm-guide | yes |  |
 | https://www.logoviking.com/blog/favicon-size-guide | 200 | https://www.logoviking.com/blog/favicon-size-guide | yes |  |
 | https://www.logoviking.com/blog/aspect-ratio-guide | 200 | https://www.logoviking.com/blog/aspect-ratio-guide | yes |  |
+| https://www.logoviking.com/blog/etsy-image-size-guide | 200 | https://www.logoviking.com/blog/etsy-image-size-guide | yes |  |
 
 ## Redirect checks
 

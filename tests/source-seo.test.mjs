@@ -38,6 +38,44 @@ test('SEO inventory contains only unique, concrete slugs', () => {
   assert.ok(data.blogs.some(post => post.slug === 'png-vs-jpg-explained' && post.sections?.length >= 2));
 });
 
+
+
+test('priority SEO pages have focused metadata, FAQs, and valid internal-link targets', () => {
+  const data = JSON.parse(read('scripts/seo-data.json'));
+  const tools = new Map(data.tools.map(tool => [tool.slug, tool]));
+  const blogs = new Map(data.blogs.map(post => [post.slug, post]));
+  const priorityTools = {
+    'gif-to-video': /GIF to WebM Converter/i,
+    'resize-image': /Resize Image Online/i,
+    'gradient-generator': /Color Gradient Generator/i,
+    'logo-size-generator': /Logo Size Generator/i,
+  };
+  for (const [slug, titlePattern] of Object.entries(priorityTools)) {
+    const tool = tools.get(slug);
+    assert.ok(tool, `missing ${slug}`);
+    assert.match(tool.seoTitle, titlePattern);
+    assert.match(tool.h1, titlePattern);
+    assert.ok(tool.description.length >= 70 && tool.description.length <= 180, `${slug} description length`);
+    assert.ok(tool.intro.length >= 120, `${slug} intro is thin`);
+    assert.ok(tool.sections?.length >= 2, `${slug} needs substantive sections`);
+    assert.ok(tool.faqs?.length >= 3, `${slug} needs focused FAQs`);
+    for (const related of tool.relatedTools ?? []) assert.ok(tools.has(related), `${slug} bad related tool ${related}`);
+    for (const related of tool.relatedBlogs ?? []) assert.ok(blogs.has(related), `${slug} bad related blog ${related}`);
+  }
+
+  for (const slug of ['compress-images-for-web', 'etsy-image-size-guide']) {
+    const post = blogs.get(slug);
+    assert.ok(post, `missing ${slug}`);
+    assert.ok(post.seoTitle && post.h1, `${slug} needs dedicated title and H1`);
+    assert.ok(post.description.length >= 90 && post.description.length <= 180, `${slug} description length`);
+    assert.ok(post.sections?.length >= 4, `${slug} needs substantive sections`);
+    assert.ok(post.faqs?.length >= 3, `${slug} needs FAQs`);
+    for (const related of post.relatedTools ?? []) assert.ok(tools.has(related), `${slug} bad related tool ${related}`);
+    for (const related of post.relatedBlogs ?? []) assert.ok(blogs.has(related), `${slug} bad related blog ${related}`);
+  }
+  assert.match(blogs.get('etsy-image-size-guide').sections[0].paragraphs.join(' '), /2000 pixels/i);
+});
+
 test('redirect configuration canonicalizes legacy and apex URLs in one hop', () => {
   const config = JSON.parse(read('vercel.json'));
   assert.equal(config.rewrites, undefined);

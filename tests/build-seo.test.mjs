@@ -47,6 +47,29 @@ test('every sitemap page is self-canonical, indexable, and prerendered', () => {
   }
 });
 
+
+
+test('priority SEO pages have targeted metadata, self-canonicals, internal links, and relevant schema', () => {
+  const cases = [
+    ['/tools/gif-to-video', /GIF to WebM Converter/i, ['/blog/gif-to-webm-guide', '/blog/compress-images-for-web'], ['WebApplication', 'FAQPage']],
+    ['/tools/resize-image', /Resize Image Online/i, ['/tools/compress-image', '/blog/etsy-image-size-guide'], ['WebApplication', 'FAQPage']],
+    ['/tools/gradient-generator', /Color Gradient Generator/i, ['/tools/color-palette-generator', '/categories/designer'], ['WebApplication', 'FAQPage']],
+    ['/tools/logo-size-generator', /Logo Size Generator/i, ['/tools/favicon-generator', '/blog/etsy-image-size-guide'], ['WebApplication', 'FAQPage']],
+    ['/blog/compress-images-for-web', /Compress Images for Websites/i, ['/tools/compress-image', '/tools/resize-image'], ['BlogPosting', 'FAQPage']],
+    ['/blog/etsy-image-size-guide', /Etsy Image Sizes/i, ['/tools/resize-image', '/tools/compress-image'], ['BlogPosting', 'FAQPage']],
+  ];
+  for (const [route, theme, expectedLinks, schemaTypes] of cases) {
+    const html = readDist(routeFile(route));
+    assert.equal(html.match(/<link rel="canonical" href="([^"]+)"/)?.[1], `${origin}${route}`);
+    assert.match(html.match(/<title>(.*?)<\/title>/s)?.[1] ?? '', theme);
+    assert.match(html.match(/<h1\b[^>]*>(.*?)<\/h1>/s)?.[1] ?? '', theme);
+    assert.doesNotMatch(html, /<meta name="robots" content="noindex/i);
+    for (const href of expectedLinks) assert.match(html, new RegExp(`href="${href.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}"`));
+    const jsonLd = [...html.matchAll(/<script[^>]*type="application\/ld\+json"[^>]*>(.*?)<\/script>/gs)].map(match => match[1]).join('\n');
+    for (const type of schemaTypes) assert.match(jsonLd, new RegExp(`"@type":"${type}"`));
+  }
+});
+
 test('private pages, 404, and former soft-404 examples have correct outcomes', () => {
   for (const route of ['/credits', '/dashboard', '/account', '/settings', '/auth/login', '/auth/register']) {
     const html = readDist(routeFile(route));
