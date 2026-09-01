@@ -1216,6 +1216,7 @@ const tools: Tool[] = [
   { slug: "color-palette-generator",name: "Color Palette Generator", category: "designer",description: "Generate beautiful, harmonious color palettes instantly." },
   { slug: "gradient-generator",     name: "Color Gradient Generator",category: "designer",description: "Create linear and radial CSS color gradients, preview them live, adjust direction or angle, and copy the CSS." },
   { slug: "font-pair-generator",    name: "Font Pair Generator",     category: "designer",description: "Find the perfect font pairing for your brand or project." },
+  { slug: "mockup-generator",       name: "Logo Mockup Generator",    category: "designer",description: "Upload a logo and preview it on business cards, storefronts, packaging, cups, apparel, and mobile screens — directly in your browser.", featured: true, isNew: true },
   { slug: "gif-to-video",           name: "GIF to WebM Converter",   category: "designer",description: "Convert animated GIF files to downloadable WebM video in supported browsers, with looping HTML and MP4/ffmpeg guidance.", isNew: true },
   { slug: "qr-code-generator",      name: "QR Code Generator",       category: "designer",description: "Generate branded QR codes for links and content." },
   { slug: "logo-size-generator",    name: "Logo Size Generator & Guide",category: "designer",description: "Find logo, profile, banner, favicon, and social image dimensions for popular platforms and copy the size list." },
