@@ -1,5 +1,5 @@
 {
-  "lastModified": "2026-08-27",
+  "lastModified": "2026-08-31",
   "tools": [
     {
       "slug": "all-in-one-creator-kit",
@@ -236,6 +236,60 @@
       "name": "Font Pair Generator",
       "category": "designer",
       "description": "Find the perfect font pairing for your brand or project."
+    },
+    {
+      "slug": "mockup-generator",
+      "name": "Logo Mockup Generator",
+      "category": "designer",
+      "description": "Upload a logo and preview it on business cards, storefronts, packaging, cups, apparel, and mobile screens directly in your browser.",
+      "seoTitle": "Logo Mockup Generator — Free Brand Mockup Tool",
+      "h1": "Free Logo Mockup Generator",
+      "intro": "Turn a flat logo into a polished brand presentation in seconds. Upload your logo, choose a scene, adjust placement, and download a PNG mockup without sending your file to a server.",
+      "sections": [
+        {
+          "title": "Create logo mockups without expensive 3D software",
+          "paragraphs": [
+            "LogoViking's mockup generator uses lightweight browser rendering instead of a paid AI API or GPU service. That keeps the workflow fast, private, and practical for early brand concepts.",
+            "Use mockups to show how a logo may look on a business card, storefront sign, package, coffee cup, T-shirt, or phone screen before investing in physical production."
+          ]
+        },
+        {
+          "title": "Useful for brand presentations and client proposals",
+          "paragraphs": [
+            "A realistic context helps clients understand a logo system better than a flat mark by itself. Mockups can make portfolio pages, pitch decks, proposals, and social posts easier to evaluate.",
+            "These starter scenes are original procedural LogoViking scenes. For production packaging, printing, embroidery, or signage, always confirm the final supplier's dimensions and artwork requirements."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Is the LogoViking mockup generator free?",
+          "answer": "Yes. The current browser-based mockup generator is free to use and can export a standard PNG mockup."
+        },
+        {
+          "question": "Does LogoViking upload my logo?",
+          "answer": "No. The current mockup tool processes the logo in your browser and does not need to upload it to a LogoViking server."
+        },
+        {
+          "question": "Can I use a transparent PNG logo?",
+          "answer": "Yes. Transparent PNG files work well because the logo can sit naturally on the generated mockup scene."
+        },
+        {
+          "question": "Is this a full 3D packaging editor?",
+          "answer": "No. This is a lightweight mockup generator for fast brand previews. It intentionally avoids expensive real-time 3D rendering and complex packaging dieline editing."
+        }
+      ],
+      "relatedTools": [
+        "logo-size-generator",
+        "color-palette-generator",
+        "font-pair-generator",
+        "favicon-generator",
+        "background-remover"
+      ],
+      "relatedBlogs": [
+        "aspect-ratio-guide",
+        "favicon-size-guide"
+      ]
     },
     {
       "slug": "gif-to-video",
