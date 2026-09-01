@@ -13,6 +13,10 @@ const __dirname = path.dirname(__filename);
 const externalRuntimeOnly = ["@imgly/background-removal"];
 
 export default defineConfig({
+  server: {
+    host: "0.0.0.0",
+    allowedHosts: ["terminal.local"],
+  },
   plugins: [
     react(),
     tailwindcss(),
