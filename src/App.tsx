@@ -28,6 +28,7 @@ import {
   Check,
   ChevronRight,
   Copy,
+  Compass,
   Globe,
   Grid3X3,
   Home,
@@ -45,6 +46,7 @@ import {
   Play,
   Plus,
   Search,
+  Scaling,
   Settings,
   Shield,
   Sparkles,
@@ -52,6 +54,7 @@ import {
   Target,
   Trash2,
   UserPlus,
+  User,
   Video,
   WandSparkles,
   Wand2,
@@ -1598,7 +1601,7 @@ function Shell(){
     }
   },[menuOpen]);
   return(
-    <div className="min-h-screen bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100">
+    <div className="min-h-screen bg-gray-50 pb-20 text-gray-900 dark:bg-gray-950 dark:text-gray-100 md:pb-0">
       <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
       <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
       <main className="min-h-[70vh]">
@@ -1624,6 +1627,7 @@ function Shell(){
       </main>
       <Footer/>
       <BackToTop/>
+      <MobileBottomNav/>
     </div>
   );
 }
@@ -1676,7 +1680,7 @@ function Header({menuOpen,setMenuOpen}:{menuOpen:boolean;setMenuOpen:(v:boolean)
               <span style={{color:ct.color}}>Logo</span>
               <span className="text-gray-900 dark:text-white">Viking</span>
             </p>
-            <p className="mt-0.5 hidden text-[10px] font-semibold uppercase tracking-[0.18em] sm:block" style={{color:ct.accent}}>
+            <p className="mt-0.5 text-[8px] font-semibold uppercase tracking-[0.15em] sm:text-[10px] sm:tracking-[0.18em]" style={{color:ct.accent}}>
               Creator Toolkit
             </p>
           </div>
@@ -1698,7 +1702,7 @@ function Header({menuOpen,setMenuOpen}:{menuOpen:boolean;setMenuOpen:(v:boolean)
         {/* Actions — push to right on mobile when search is hidden */}
         <div className="ml-auto flex items-center gap-1.5 sm:gap-2 md:ml-0">
           {/* 5-color theme picker */}
-          <div className="relative">
+          <div className="relative hidden sm:block">
             <button
               type="button"
               onClick={(e)=>{e.stopPropagation();setLangOpen(false);setThemeOpen(v=>!v);}}
@@ -1713,7 +1717,7 @@ function Header({menuOpen,setMenuOpen}:{menuOpen:boolean;setMenuOpen:(v:boolean)
           </div>
 
           {/* Language picker — button only; modal is rendered at root */}
-          <div>
+          <div className="hidden sm:block">
             <button
               type="button"
               onClick={(e)=>{e.stopPropagation();setThemeOpen(false);setLangOpen(v=>!v);}}
@@ -1856,14 +1860,17 @@ function Header({menuOpen,setMenuOpen}:{menuOpen:boolean;setMenuOpen:(v:boolean)
           <Link to="/tools" className="hidden items-center gap-1.5 rounded-xl px-3.5 py-2 text-sm font-semibold text-white shadow-sm sm:flex" style={{background:ct.color}}>
             <Grid3X3 size={15}/> <span className="hidden md:inline">All Tools</span>
           </Link>
-          <button type="button" onClick={()=>setMenuOpen(!menuOpen)} className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-gray-200 bg-white text-gray-600 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300 lg:hidden" aria-label="Menu" aria-expanded={menuOpen}>
+          <Link to="/tools" className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-800 sm:hidden" aria-label="Search tools">
+            <Search size={18}/>
+          </Link>
+          <button type="button" onClick={()=>setMenuOpen(!menuOpen)} className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl text-gray-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800 lg:hidden" aria-label="Menu" aria-expanded={menuOpen}>
             {menuOpen?<X size={18}/>:<Menu size={18}/>}
           </button>
         </div>
       </div>
 
       {/* Category rail */}
-      <div className="border-t border-gray-100 dark:border-gray-800/60">
+      <div className="hidden border-t border-gray-100 dark:border-gray-800/60 md:block">
         <div className="mx-auto flex max-w-7xl items-center gap-1 overflow-x-auto px-4 py-2 sm:px-6 [&::-webkit-scrollbar]:hidden">
           <Link to="/tools" className="flex shrink-0 items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-medium text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800">
             <LayoutGrid size={13}/> {t("nav.all")}
@@ -1924,6 +1931,33 @@ function MobileMenu({menuOpen,setMenuOpen}:{menuOpen:boolean;setMenuOpen:(v:bool
         </motion.div>
       )}
     </AnimatePresence>
+  );
+}
+
+function MobileBottomNav(){
+  const loc=useLocation();
+  const{colorTheme}=useSite();
+  const ct=colorThemes.find(c=>c.id===colorTheme)??colorThemes[0];
+  const items:[string,string,LucideIcon][]=[
+    ["Home","/",Home],
+    ["Explore","/tools",Compass],
+    ["Saved","/dashboard",Bookmark],
+    ["Account","/account",User],
+  ];
+  return(
+    <nav className="fixed inset-x-0 bottom-0 z-[60] border-t border-gray-200 bg-white/95 px-3 pt-2 shadow-[0_-8px_28px_rgba(15,23,42,0.08)] backdrop-blur-xl dark:border-gray-800 dark:bg-gray-950/95 md:hidden" style={{paddingBottom:"max(.5rem, env(safe-area-inset-bottom))"}} aria-label="Mobile primary navigation">
+      <div className="mx-auto grid max-w-md grid-cols-4">
+        {items.map(([label,href,Icon])=>{
+          const active=href==="/"?loc.pathname==="/":loc.pathname.startsWith(href);
+          return(
+            <Link key={href} to={href} className={cn("flex min-h-12 flex-col items-center justify-center gap-1 rounded-xl text-[11px] font-semibold transition-colors",active?"text-amber-700 dark:text-amber-400":"text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white")} style={active?{color:ct.color}:{}} aria-current={active?"page":undefined}>
+              <Icon size={20} strokeWidth={active?2.4:2}/>
+              <span>{label}</span>
+            </Link>
+          );
+        })}
+      </div>
+    </nav>
   );
 }
 
@@ -2311,6 +2345,117 @@ function Workbench({tool}:{tool:Tool}){
 }
 
 // ─── Pages ────────────────────────────────────────────────────────────────────
+function MobileHomeExperience(){
+  const{colorTheme}=useSite();
+  const nav=useNavigate();
+  const[query,setQuery]=useState("");
+  const ct=colorThemes.find(c=>c.id===colorTheme)??colorThemes[0];
+  const quickActions:{name:string;description:string;slug:string;icon:LucideIcon;color:string}[]=[
+    {name:"Compress Image",description:"Reduce size without losing quality",slug:"compress-image",icon:ImageIcon,color:"text-violet-300"},
+    {name:"Resize Image",description:"Resize to any width and height",slug:"resize-image",icon:Scaling,color:"text-cyan-300"},
+    {name:"Convert",description:"Convert GIFs to video and more",slug:"gif-to-video",icon:Video,color:"text-amber-300"},
+    {name:"Remove Background",description:"Remove backgrounds instantly",slug:"background-remover",icon:Wand2,color:"text-fuchsia-300"},
+  ];
+  const mobileCategories:{name:string;href:string;icon:LucideIcon}[]=[
+    {name:"Image",href:"/categories/image",icon:ImageIcon},
+    {name:"Design",href:"/categories/designer",icon:Palette},
+    {name:"Social",href:"/categories/instagram",icon:Camera},
+    {name:"SEO",href:"/categories/seo",icon:Target},
+    {name:"AI",href:"/categories/ai",icon:Sparkles},
+  ];
+  const popularSlugs=["gif-to-video","gradient-generator","logo-size-generator"];
+
+  const submitSearch=(event:React.FormEvent)=>{
+    event.preventDefault();
+    const value=query.trim();
+    nav(value?`/tools?q=${encodeURIComponent(value)}`:"/tools");
+  };
+
+  return(
+    <div className="md:hidden">
+      <section className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-violet-950 to-slate-950 px-4 pb-5 pt-5 text-white">
+        <div className="absolute inset-0 opacity-30" style={{backgroundImage:"radial-gradient(circle at 1px 1px,rgba(255,255,255,0.06) 1px,transparent 0)",backgroundSize:"28px 28px"}}/>
+        <div className="absolute -right-20 top-8 h-64 w-64 rounded-full blur-3xl" style={{background:`${ct.color}38`}}/>
+        <div className="relative mx-auto max-w-md">
+          <div className="flex justify-center">
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-medium text-violet-100 backdrop-blur-sm">
+              <Sparkles size={13} className="text-violet-300"/> 80+ free creator tools
+            </div>
+          </div>
+          <h1 className="mt-3 text-center text-[2rem] font-black leading-[1.08] tracking-tight">
+            <span className="block">What do you want to</span>
+            <span className="block">create <span className="bg-gradient-to-r from-violet-300 via-fuchsia-300 to-cyan-300 bg-clip-text text-transparent">today?</span></span>
+          </h1>
+          <form onSubmit={submitSearch} className="mt-4 flex min-h-12 items-center gap-3 rounded-xl bg-white px-4 shadow-xl shadow-slate-950/20">
+            <Search size={19} className="shrink-0 text-gray-400"/>
+            <input value={query} onChange={event=>setQuery(event.target.value)} className="min-w-0 flex-1 bg-transparent text-base text-gray-900 outline-none placeholder:text-gray-400" placeholder="Search tools" aria-label="Search tools"/>
+          </form>
+
+          <div className="mt-4">
+            <h2 className="text-sm font-bold">Quick Actions</h2>
+            <div className="mt-2 grid grid-cols-2 gap-2">
+              {quickActions.map(action=>{const Icon=action.icon;return(
+                <Link key={action.slug} to={`/tools/${action.slug}`} className="group flex min-h-[70px] items-center gap-2.5 rounded-xl border border-white/15 bg-white/[0.07] p-2.5 backdrop-blur-sm transition-colors hover:bg-white/[0.12]">
+                  <Icon size={27} className={cn("shrink-0",action.color)}/>
+                  <div className="min-w-0">
+                    <p className="text-[11px] font-bold leading-tight text-white">{action.name}</p>
+                    <p className="mt-0.5 text-[9px] leading-3 text-slate-300">{action.description}</p>
+                  </div>
+                </Link>
+              )})}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="mx-auto max-w-md px-4 pb-8 pt-5">
+        <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-2 [&::-webkit-scrollbar]:hidden" aria-label="Tool categories">
+          {mobileCategories.map((category,index)=>{const Icon=category.icon;return(
+            <Link key={category.name} to={category.href} className={cn("flex min-h-11 shrink-0 items-center gap-2 rounded-xl border px-3.5 text-sm font-semibold",index===0?"border-amber-200 bg-amber-50 text-amber-800 dark:border-amber-800 dark:bg-amber-950/30 dark:text-amber-300":"border-gray-200 bg-white text-gray-600 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-300")}>
+              <Icon size={17}/>{category.name}
+            </Link>
+          )})}
+        </div>
+
+        <section className="mt-5 rounded-2xl border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-800 dark:bg-gray-900">
+          <div className="flex items-center justify-between">
+            <h2 className="text-xl font-black text-gray-900 dark:text-white">Popular Now</h2>
+            <Link to="/tools" className="flex min-h-11 items-center gap-1 text-sm font-bold text-amber-700 dark:text-amber-400">View all <ChevronRight size={17}/></Link>
+          </div>
+          <div className="mt-2 divide-y divide-gray-100 dark:divide-gray-800">
+            {popularSlugs.map(slug=>{const tool=getToolBySlug(slug);if(!tool)return null;const meta=categoryMeta[tool.category];const Icon=meta.icon;return(
+              <Link key={slug} to={`/tools/${slug}`} className="flex min-h-[82px] items-center gap-3 py-3">
+                <div className={cn("flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br text-white",meta.gradient)}><Icon size={20}/></div>
+                <div className="min-w-0 flex-1">
+                  <h3 className="font-bold text-gray-900 dark:text-white">{tool.name}</h3>
+                  <p className="mt-0.5 line-clamp-1 text-xs text-gray-500 dark:text-gray-400">{tool.description}</p>
+                </div>
+                <ChevronRight size={19} className="shrink-0 text-gray-400"/>
+              </Link>
+            )})}
+          </div>
+        </section>
+
+        <section className="mt-5">
+          <div className="flex items-center justify-between">
+            <h2 className="text-lg font-black text-gray-900 dark:text-white">New this week</h2>
+            <Link to="/tools" className="flex min-h-11 items-center gap-1 text-sm font-bold text-amber-700 dark:text-amber-400">View all <ChevronRight size={17}/></Link>
+          </div>
+          <div className="mt-1 divide-y divide-gray-200 dark:divide-gray-800">
+            {tools.filter(tool=>tool.isNew).slice(0,2).map(tool=>{const meta=categoryMeta[tool.category];const Icon=meta.icon;return(
+              <Link key={tool.slug} to={`/tools/${tool.slug}`} className="flex min-h-[76px] items-center gap-3 py-3">
+                <div className={cn("flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br text-white",meta.gradient)}><Icon size={18}/></div>
+                <div className="min-w-0 flex-1"><h3 className="font-bold text-gray-900 dark:text-white">{tool.name}</h3><p className="line-clamp-1 text-xs text-gray-500 dark:text-gray-400">{tool.description}</p></div>
+                <Badge variant="emerald">New</Badge>
+              </Link>
+            )})}
+          </div>
+        </section>
+      </div>
+    </div>
+  );
+}
+
 function HomePage(){
   const{account,t,colorTheme}=useSite();
   const{history}=useSite();
@@ -2324,8 +2469,10 @@ function HomePage(){
     <>
       <SeoHead title={`${siteName} — Creator + Designer + SEO Toolkit`} description="Free creator, image, design, social media, and SEO tools for faster publishing, conversion, optimization, and website workflows." schema={homeSchema}/>
 
+      <MobileHomeExperience/>
+
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-violet-950 to-slate-950 text-white">
+      <section className="relative hidden overflow-hidden bg-gradient-to-br from-slate-950 via-violet-950 to-slate-950 text-white md:block">
         <div className="absolute inset-0 opacity-30" style={{backgroundImage:"radial-gradient(circle at 1px 1px,rgba(255,255,255,0.06) 1px,transparent 0)",backgroundSize:"28px 28px"}}/>
         <div className="absolute top-0 left-1/4 h-80 w-80 rounded-full blur-3xl" style={{background:`${ct.color}33`}}/>
         <div className="absolute bottom-0 right-1/4 h-80 w-80 rounded-full bg-indigo-600/20 blur-3xl"/>
@@ -2381,7 +2528,7 @@ function HomePage(){
         </div>
       </section>
 
-      <PageWrap>
+      <PageWrap className="hidden md:block">
         {/* New tools */}
         {newTools.length>0&&(
           <section className="mb-10">
