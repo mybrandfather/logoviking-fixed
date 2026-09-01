@@ -4,6 +4,7 @@
 
 import React, { useState, useRef, useCallback, useEffect, ChangeEvent } from "react";
 import { Copy, Download, RefreshCw, Upload, Check, Zap, Plus, Trash2, ImageIcon } from "lucide-react";
+import MockupGeneratorTool from "./MockupGeneratorTool";
 
 // ─── Shared helpers ───────────────────────────────────────────────────────────
 function cn(...classes: (string | false | null | undefined)[]) {
@@ -1824,6 +1825,7 @@ export const toolComponents: Record<string, React.ComponentType> = {
   "gradient-generator":              GradientGeneratorTool,
   "font-pair-generator":             FontPairGeneratorTool,
   "qr-code-generator":               QRCodeGeneratorTool,
+  "mockup-generator":                MockupGeneratorTool,
   // Canvas image tools
   "compress-image":                  CompressImageTool,
   "bulk-resize":                     BulkResizeTool,
