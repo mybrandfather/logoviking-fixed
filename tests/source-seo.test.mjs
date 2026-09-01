@@ -36,6 +36,23 @@ test('critical handoff paints no temporary UI before React mounts', () => {
   assert.match(main, /classList\.add\("lv-app-ready"\)/);
 });
 
+test('mobile homepage uses real tool routes without duplicating the homepage', () => {
+  const app = read('src/App.tsx');
+  assert.match(app, /function MobileHomeExperience\(\)/);
+  assert.match(app, /function MobileBottomNav\(\)/);
+  assert.match(app, /What do you want to/);
+  assert.match(app, /placeholder="Search tools"/);
+  for (const slug of ['compress-image', 'resize-image', 'gif-to-video', 'background-remover']) {
+    assert.ok(app.includes(`slug:"${slug}"`), `missing mobile tool ${slug}`);
+  }
+  for (const route of ['/categories/image', '/categories/designer', '/categories/seo', '/categories/ai']) {
+    assert.ok(app.includes(route), `missing mobile category ${route}`);
+  }
+  assert.match(app, /className="relative hidden overflow-hidden[^"]*md:block"/);
+  assert.match(app, /<MobileHomeExperience\/>/);
+  assert.doesNotMatch(app, /mobile\.logoviking|\/mobile-home|\/m\//i);
+});
+
 test('robots rules protect private routes without crawler-specific overrides', () => {
   const robots = read('public/robots.txt');
   assert.equal((robots.match(/^User-agent:/gm) ?? []).length, 1);
