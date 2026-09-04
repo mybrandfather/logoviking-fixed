@@ -29,6 +29,8 @@ import {
   ChevronRight,
   Copy,
   Compass,
+  Droplets,
+  FileVideo,
   Globe,
   Grid3X3,
   Home,
@@ -47,6 +49,7 @@ import {
   Plus,
   Search,
   Scaling,
+  ScanText,
   Settings,
   Shield,
   Sparkles,
@@ -2363,7 +2366,11 @@ function MobileHomeExperience(){
     {name:"SEO",href:"/categories/seo",icon:Target},
     {name:"AI",href:"/categories/ai",icon:Sparkles},
   ];
-  const popularSlugs=["gif-to-video","gradient-generator","logo-size-generator"];
+  const popularItems:{name:string;description:string;slug:string;icon:LucideIcon;surface:string;iconColor:string}[]=[
+    {name:"GIF to Video",description:"Convert GIFs to MP4 videos in seconds.",slug:"gif-to-video",icon:FileVideo,surface:"bg-orange-50 dark:bg-orange-950/30",iconColor:"text-orange-600 dark:text-orange-400"},
+    {name:"Gradient Generator",description:"Create beautiful gradients for your designs.",slug:"gradient-generator",icon:Droplets,surface:"bg-violet-50 dark:bg-violet-950/30",iconColor:"text-violet-600 dark:text-violet-400"},
+    {name:"Logo Size Generator",description:"Generate perfect logo sizes for any platform.",slug:"logo-size-generator",icon:ScanText,surface:"bg-emerald-50 dark:bg-emerald-950/30",iconColor:"text-emerald-600 dark:text-emerald-400"},
+  ];
 
   const submitSearch=(event:React.FormEvent)=>{
     event.preventDefault();
@@ -2397,10 +2404,11 @@ function MobileHomeExperience(){
               {quickActions.map(action=>{const Icon=action.icon;return(
                 <Link key={action.slug} to={`/tools/${action.slug}`} className="group flex min-h-[70px] items-center gap-2.5 rounded-xl border border-white/15 bg-white/[0.07] p-2.5 backdrop-blur-sm transition-colors hover:bg-white/[0.12]">
                   <Icon size={27} className={cn("shrink-0",action.color)}/>
-                  <div className="min-w-0">
+                  <div className="min-w-0 flex-1">
                     <p className="text-[11px] font-bold leading-tight text-white">{action.name}</p>
                     <p className="mt-0.5 text-[9px] leading-3 text-slate-300">{action.description}</p>
                   </div>
+                  <ChevronRight size={14} className="shrink-0 text-white/90"/>
                 </Link>
               )})}
             </div>
@@ -2409,10 +2417,10 @@ function MobileHomeExperience(){
       </section>
 
       <div className="mx-auto max-w-md px-4 pb-8 pt-5">
-        <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-2 [&::-webkit-scrollbar]:hidden" aria-label="Tool categories">
+        <div className="grid grid-cols-5 gap-1.5 pb-2" aria-label="Tool categories">
           {mobileCategories.map((category,index)=>{const Icon=category.icon;return(
-            <Link key={category.name} to={category.href} className={cn("flex min-h-11 shrink-0 items-center gap-2 rounded-xl border px-3.5 text-sm font-semibold",index===0?"border-amber-200 bg-amber-50 text-amber-800 dark:border-amber-800 dark:bg-amber-950/30 dark:text-amber-300":"border-gray-200 bg-white text-gray-600 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-300")}>
-              <Icon size={17}/>{category.name}
+            <Link key={category.name} to={category.href} className={cn("flex min-h-11 min-w-0 items-center justify-center gap-1 rounded-xl border px-1 text-[11px] font-semibold",index===0?"border-amber-200 bg-amber-50 text-amber-800 dark:border-amber-800 dark:bg-amber-950/30 dark:text-amber-300":"border-gray-200 bg-white text-gray-600 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-300")}>
+              <Icon size={15}/>{category.name}
             </Link>
           )})}
         </div>
@@ -2423,12 +2431,12 @@ function MobileHomeExperience(){
             <Link to="/tools" className="flex min-h-11 items-center gap-1 text-sm font-bold text-amber-700 dark:text-amber-400">View all <ChevronRight size={17}/></Link>
           </div>
           <div className="mt-2 divide-y divide-gray-100 dark:divide-gray-800">
-            {popularSlugs.map(slug=>{const tool=getToolBySlug(slug);if(!tool)return null;const meta=categoryMeta[tool.category];const Icon=meta.icon;return(
-              <Link key={slug} to={`/tools/${slug}`} className="flex min-h-[82px] items-center gap-3 py-3">
-                <div className={cn("flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br text-white",meta.gradient)}><Icon size={20}/></div>
+            {popularItems.map(item=>{const Icon=item.icon;return(
+              <Link key={item.slug} to={`/tools/${item.slug}`} className="flex min-h-[82px] items-center gap-3 py-3">
+                <div className={cn("flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl",item.surface,item.iconColor)}><Icon size={23}/></div>
                 <div className="min-w-0 flex-1">
-                  <h3 className="font-bold text-gray-900 dark:text-white">{tool.name}</h3>
-                  <p className="mt-0.5 line-clamp-1 text-xs text-gray-500 dark:text-gray-400">{tool.description}</p>
+                  <h3 className="font-bold text-gray-900 dark:text-white">{item.name}</h3>
+                  <p className="mt-0.5 line-clamp-1 text-xs text-gray-500 dark:text-gray-400">{item.description}</p>
                 </div>
                 <ChevronRight size={19} className="shrink-0 text-gray-400"/>
               </Link>
